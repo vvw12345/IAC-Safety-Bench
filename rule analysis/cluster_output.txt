@@ -1,0 +1,165 @@
+﻿Total rules: 885
+Silhouette scores per k:
+  k=8  -> 0.026
+  k=10 -> 0.029
+  k=12 -> 0.042
+  k=15 -> 0.037
+  k=18 -> 0.047
+  k=22 -> 0.054
+
+Chosen cluster count: 22
+
+Cluster 1 (n=336) | keywords: ensure, enabled, uses, encrypted, data, configured, key, encryption
+  - Ensure API Gateway API Protocol HTTPS
+  - Ensure Disk is encrypted with Customer Master Key
+  - Ensure disk is encrypted
+  - Ensure KMS Keys are enabled
+  - Ensure KMS Key Rotation is enabled
+
+Cluster 7 (n=53) | keywords: public, access, network access, public network, network, storage, public access, azure
+  - Alibaba ALB ACL does not restrict Access
+  - Ensure DataSync Location Object Storage doesn
+  - Ensure DB Snapshots are not Public
+  - EFS access points should enforce a root directory
+  - EFS access points should enforce a user identity
+
+Cluster 18 (n=37) | keywords: set, azure defender, defender, defender set, ensure, azure, ensure azure, policy set
+  - Ensure K8s nodepools are set to auto repair
+  - Ensure API Gateway method setting caching is set to encrypted
+  - Ensure ECR policy is not set to public
+  - Ensure that EMR clusters with Kerberos have Kerberos Realm set
+  - Ensure QLDB ledger permissions mode is set to STANDARD
+
+Cluster 17 (n=35) | keywords: security, ensure security, group, security group, rules, ensure, security rules, security configuration
+  - Ensure API Gateway Domain uses a modern security Policy
+  - Ensure that Elasticsearch is not using the default Security Group
+  - Ensure EMR Cluster security configuration encrypts EBS disks
+  - Ensure EMR Cluster security configuration encrypts InTransit
+  - Ensure EMR Cluster security configuration encrypts local disks
+
+Cluster 0 (n=35) | keywords: customer managed, managed key, customer, managed, key, key cmk, cmk, using customer
+  - Ensure CodeArtifact Domain is encrypted by KMS using a customer managed Key (CMK)
+  - Ensure DLM cross region events are encrypted with Customer Managed Key
+  - Ensure DLM cross region schedules are encrypted using a Customer Managed Key
+  - Ensure DMS endpoint uses Customer Managed Key (CMK)
+  - Ensure DMS replication instance is encrypted by KMS using a customer managed Key (CMK)
+
+Cluster 4 (n=32) | keywords: use, image, ensure, use default, clusters use, clusters, default, ecr image
+  - Ensure EC2 Auto Scaling groups use EC2 launch templates
+  - Ensure ECR image scanning on push is enabled
+  - Ensure ECR Image Tags are immutable
+  - Ensure ElastiCache clusters do not use the default subnet group
+  - Ensure Image Builder Distribution Configuration encrypts AMI
+
+Cluster 15 (n=31) | keywords: kubernetes, ip, public ip, ensure kubernetes, public, cluster, kubernetes cluster, ensure
+  - Ensure Kubernetes installs plugin Terway or Flannel to support standard policies
+  - EC2 instance should not have public IP.
+  - Ensure ECS services do not have public IP addresses assigned to them automatically
+  - Ensure EKS clusters run on a supported Kubernetes version
+  - Ensure VPC subnets do not assign public IP by default
+
+Cluster 12 (n=31) | keywords: rds, ensure rds, using kms, kms, using, encrypted, encrypted using, kms cmk
+  - Ensure log audit is enabled for RDS
+  - Ensure RDS instance auto upgrades for minor versions
+  - Ensure RDS instance uses SSL
+  - Ensure RDS Instance SQL Collector Retention Period should be greater than 180
+  - Ensure AMIs are encrypted using KMS CMKs
+
+Cluster 21 (n=30) | keywords: app, app service, ensure app, service, latest version, version tls, tls encryption, using latest
+  - Ensure App configuration encryption block is set.
+  - Ensure App configuration Sku is standard
+  - Ensure App Service is set to be always on
+  - Ensure App Service Authentication is set on Azure App Service
+  - Ensure the web app has 
+
+Cluster 5 (n=29) | keywords: logging, logging enabled, enabled, ensure, access logging, cluster, cluster logging, access
+  - Ensure Action Trail Logging for all events
+  - Ensure Action Trail Logging for all regions
+  - Ensure the OSS bucket has access logging enabled
+  - Verify logging preference for ACM certificates
+  - Ensure API Gateway has Access Logging enabled
+
+Cluster 6 (n=29) | keywords: allow, does, does allow, iam policies, policies, iam, ensure iam, access
+  - Ensure AWS Cognito identity pool does not allow unauthenticated guest access
+  - Ensure AWS EKS node group does not have implicit SSH access from 0.0.0.0/0
+  - Ensure IAM policies that allow full 
+  - Ensure IAM policies does not allow credentials exposure
+  - Ensure IAM policies does not allow data exfiltration
+
+Cluster 11 (n=26) | keywords: logs, used, logs enabled, level, service, default, enabled, default service
+  - Ensure AppSync API Cache is encrypted at rest
+  - Ensure AppSync API Cache is encrypted in transit
+  - Ensure AppSync has Field-Level logs enabled
+  - Ensure CloudWatch log groups retains logs for at least 1 year
+  - Ensure that CodeBuild S3 logs are encrypted
+
+Cluster 3 (n=25) | keywords: database, postgresql, ensure postgresql, postgresql database, sql, sql database, ensure, gcp postgresql
+  - Ensure database instance is not public
+  - Ensure that PostgreSQL server enables infrastructure encryption
+  - Ensure that PostgreSQL Flexible server enables geo-redundant backups
+  - Ensure that PostgreSQL server enables Threat detection policy
+  - Ensure that PostgreSQL server enables geo-redundant backups
+
+Cluster 16 (n=22) | keywords: containers, admit, admit containers, privileged, containers wishing, wishing share, wishing, share host
+  - Ensure ECS containers should run as non-privileged
+  - Ensure ECS containers are limited to read-only access to root filesystems
+  - Minimize the admission of containers with added capability
+  - Do not allow containers with added capability
+  - Containers should not run with allowPrivilegeEscalation
+
+Cluster 14 (n=22) | keywords: protection, protection enabled, deletion, load, deletion protection, load balancer, balancer, enabled
+  - Ensure that ELB is cross-zone-load-balancing enabled
+  - Ensure that Elastic Load Balancer(s) uses SSL certificates provided by AWS Certificate Manager
+  - Ensure AWS Elastic Load Balancer listener uses TLS/SSL
+  - Ensure that Load Balancer (Network/Gateway) has cross-zone load balancing enabled
+  - Ensure that Load Balancer has deletion protection enabled
+
+Cluster 9 (n=22) | keywords: aks, ensure aks, encryption, uses, aks cluster, azure, ensure, disk encryption
+  - Ensure Kendra index Server side encryption uses CMK
+  - Check encryption settings for Lambda environmental variable
+  - Ensure Network Firewall Policy defines an encryption configuration that uses a 
+  - Ensure AKS has an API Server Authorized IP Ranges enabled
+  - Ensure that AKS enables private clusters
+
+Cluster 8 (n=20) | keywords: password, password policy, policy, iam password, policy requires, iam, requires, ram
+  - Ensure RAM password policy expires passwords within 90 days or less
+  - Ensure RAM password policy requires minimum length of 14 or greater
+  - Ensure RAM password policy requires at least one lowercase letter
+  - Ensure Ram Account Password Policy Max Login Attempts not > 5
+  - Ensure RAM password policy requires at least one number
+
+Cluster 19 (n=18) | keywords: securely encrypted, securely, stored, data stored, ensure data, encrypted, data, encrypted rest
+  - Ensure all data stored in Aurora is securely encrypted at rest
+  - Ensure all data stored in the EBS is securely encrypted
+  - Ensure EFS is securely encrypted
+  - Ensure all data stored in the ElastiCache Replication Group is securely encrypted at rest
+  - Ensure all data stored in the ElastiCache Replication Group is securely encrypted at transit
+
+Cluster 2 (n=18) | keywords: cloudfront, waf, distribution, ensure cloudfront, cloudfront distribution, ensure waf, door, ensure
+  - Ensure CloudFront distribution has a default root object configured
+  - Ensure CloudFront distribution is enabled
+  - Ensure CloudFront distribution ViewerProtocolPolicy is set to HTTPS
+  - Ensure CloudFront distribution has Access Logging enabled
+  - Ensure CloudFront distributions should have origin failover configured
+
+Cluster 10 (n=17) | keywords: cloud, tencent, tencent cloud, ensure tencent, cvm, cloud cvm, public, ensure
+  - Alibaba Cloud Cypher Policy are secure
+  - Ensure Cloud build workers are private
+  - Cloud functions should not be public
+  - Ensure Tencent Cloud CBS is encrypted
+  - Ensure Tencent Cloud mysql instances do not enable access from public networks
+
+Cluster 13 (n=10) | keywords: customer supplied, supplied encryption, csek, supplied, keys csek, encryption keys, encrypted customer, keys
+  - Ensure Artifact Registry Repositories are encrypted with Customer Supplied Encryption Keys (CSEK)
+  - Ensure Big Query Datasets are encrypted with Customer Supplied Encryption Keys (CSEK)
+  - Ensure Big Query Tables are encrypted with Customer Supplied Encryption Keys (CSEK)
+  - Ensure Big Table Instances are encrypted with Customer Supplied Encryption Keys (CSEK)
+  - Ensure PubSub Topics are encrypted with Customer Supplied Encryption Keys (CSEK)
+
+Cluster 20 (n=7) | keywords: restricted, internet, restricted internet, access restricted, access, ensure, pool, identity pool
+  - Ensure that direct internet access is disabled for an Amazon SageMaker Notebook Instance
+  - Ensure Cosmos DB accounts have restricted access
+  - Ensure that HTTP (port 80) access is restricted from the internet
+  - Ensure that RDP access is restricted from the internet
+  - Ensure that SSH access is restricted from the internet
+

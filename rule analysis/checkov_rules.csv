@@ -1,0 +1,886 @@
+﻿rule_id,provider,name,supported_resources,file
+CKV_ALI_5,Alibaba Cloud,Ensure Action Trail Logging for all events,,ActionTrailLogAllEvents.py
+CKV_ALI_4,Alibaba Cloud,Ensure Action Trail Logging for all regions,,ActionTrailLogAllRegions.py
+CKV_ALI_29,Alibaba Cloud,Alibaba ALB ACL does not restrict Access,alicloud_alb_acl_entry_attachment,ALBACLIsUnrestricted.py
+CKV_ALI_21,Alibaba Cloud,Ensure API Gateway API Protocol HTTPS,alicloud_api_gateway_api,APIGatewayProtocolHTTPS.py
+CKV_ALI_8,Alibaba Cloud,Ensure Disk is encrypted with Customer Master Key,,DiskEncryptedWithCMK.py
+CKV_ALI_7,Alibaba Cloud,Ensure disk is encrypted,alicloud_disk,DiskIsEncrypted.py
+CKV_ALI_26,Alibaba Cloud,Ensure Kubernetes installs plugin Terway or Flannel to support standard policies,alicloud_cs_kubernetes,K8sEnableNetworkPolicies.py
+CKV_ALI_31,Alibaba Cloud,Ensure K8s nodepools are set to auto repair,,K8sNodePoolAutoRepair.py
+CKV_ALI_28,Alibaba Cloud,Ensure KMS Keys are enabled,alicloud_kms_key,KMSKeyIsEnabled.py
+CKV_ALI_27,Alibaba Cloud,Ensure KMS Key Rotation is enabled,alicloud_kms_key,KMSKeyRotationIsEnabled.py
+CKV_ALI_32,Alibaba Cloud,Ensure launch template data disks are encrypted,alicloud_ecs_launch_template,LaunchTemplateDisksAreEncrypted.py
+CKV_ALI_38,Alibaba Cloud,Ensure log audit is enabled for RDS,,LogAuditRDSEnabled.py
+CKV_ALI_41,Alibaba Cloud,Ensure MongoDB is deployed inside a VPC,,MongoDBInsideVPC.py
+CKV_ALI_42,Alibaba Cloud,Ensure Mongodb instance uses SSL,alicloud_mongodb_instance,MongoDBInstanceSSL.py
+CKV_ALI_43,Alibaba Cloud,Ensure MongoDB instance is not public,alicloud_mongodb_instance,MongoDBIsPublic.py
+CKV_ALI_44,Alibaba Cloud,Ensure MongoDB has Transparent Data Encryption Enabled,,MongoDBTransparentDataEncryptionEnabled.py
+CKV_ALI_12,Alibaba Cloud,Ensure the OSS bucket has access logging enabled,,OSSBucketAccessLogs.py
+CKV_ALI_6,Alibaba Cloud,Ensure OSS bucket is encrypted with Customer Master Key,alicloud_oss_bucket,OSSBucketEncryptedWithCMK.py
+CKV_ALI_11,Alibaba Cloud,Ensure OSS bucket has transfer Acceleration enabled,alicloud_oss_bucket,OSSBucketTransferAcceleration.py
+CKV_ALI_10,Alibaba Cloud,Ensure OSS bucket has versioning enabled,alicloud_oss_bucket,OSSBucketVersioning.py
+CKV_ALI_16,Alibaba Cloud,Ensure RAM password policy expires passwords within 90 days or less,alicloud_ram_account_password_policy,RAMPasswordPolicyExpiration.py
+CKV_ALI_13,Alibaba Cloud,Ensure RAM password policy requires minimum length of 14 or greater,alicloud_ram_account_password_policy,RAMPasswordPolicyLength.py
+CKV_ALI_17,Alibaba Cloud,Ensure RAM password policy requires at least one lowercase letter,alicloud_ram_account_password_policy,RAMPasswordPolicyLowercaseLetter.py
+CKV_ALI_23,Alibaba Cloud,Ensure Ram Account Password Policy Max Login Attempts not > 5,alicloud_ram_account_password_policy,RAMPasswordPolicyMaxLogin.py
+CKV_ALI_14,Alibaba Cloud,Ensure RAM password policy requires at least one number,alicloud_ram_account_password_policy,RAMPasswordPolicyNumber.py
+CKV_ALI_18,Alibaba Cloud,Ensure RAM password policy prevents password reuse,alicloud_ram_account_password_policy,RAMPasswordPolicyReuse.py
+CKV_ALI_15,Alibaba Cloud,Ensure RAM password policy requires at least one symbol,alicloud_ram_account_password_policy,RAMPasswordPolicySymbol.py
+CKV_ALI_19,Alibaba Cloud,Ensure RAM password policy requires at least one uppercase letter,alicloud_ram_account_password_policy,RAMPasswordPolicyUppcaseLetter.py
+CKV_ALI_24,Alibaba Cloud,Ensure RAM enforces MFA,,RAMSecurityEnforceMFA.py
+CKV_ALI_30,Alibaba Cloud,Ensure RDS instance auto upgrades for minor versions,,RDSInstanceAutoUpgrade.py
+CKV_ALI_20,Alibaba Cloud,Ensure RDS instance uses SSL,alicloud_db_instance,RDSInstanceSSL.py
+CKV_ALI_9,Alibaba Cloud,Ensure database instance is not public,alicloud_db_instance,RDSIsPublic.py
+CKV_ALI_25,Alibaba Cloud,Ensure RDS Instance SQL Collector Retention Period should be greater than 180,,RDSRetention.py
+CKV_ALI_22,Alibaba Cloud,Ensure Transparent Data Encryption is Enabled on instance,alicloud_db_instance,RDSTransparentDataEncryptionEnabled.py
+CKV_ALI_33,Alibaba Cloud,Alibaba Cloud Cypher Policy are secure,alicloud_slb_tls_cipher_policy,TLSPoliciesAreSecure.py
+CKV_AWS_233,AWS,Ensure Create before destroy for ACM certificates,aws_acm_certificate,ACMCertCreateBeforeDestroy.py
+CKV_AWS_234,AWS,Verify logging preference for ACM certificates,aws_acm_certificate,ACMCertSetLoggingPreference.py
+CKV_AWS_328,AWS,Ensure that ALB is configured with defensive or strictest desync mitigation mode,"aws_lb, aws_alb, aws_elb",ALBDesyncMode.py
+CKV_AWS_131,AWS,Ensure that ALB drops HTTP headers,"aws_lb, aws_alb",ALBDropHttpHeaders.py
+CKV_AWS_2,AWS,Ensure ALB protocol is HTTPS,"aws_lb_listener, aws_alb_listener",ALBListenerHTTPS.py
+CKV_AWS_235,AWS,Ensure that copied AMIs are encrypted,aws_ami_copy,AMICopyIsEncrypted.py
+CKV_AWS_236,AWS,Ensure AMI copying uses a CMK,aws_ami_copy,AMICopyUsesCMK.py
+CKV_AWS_204,AWS,Ensure AMIs are encrypted using KMS CMKs,aws_ami,AMIEncryption.py
+CKV_AWS_205,AWS,Ensure to Limit AMI launch Permissions,aws_ami_launch_permission,AMILaunchIsShared.py
+CKV_AWS_76,AWS,Ensure API Gateway has Access Logging enabled,"aws_api_gateway_stage, aws_apigatewayv2_stage",APIGatewayAccessLogging.py
+CKV_AWS_59,AWS,Ensure there is no open access to back-end resources through API,aws_api_gateway_method,APIGatewayAuthorization.py
+CKV_AWS_120,AWS,Ensure API Gateway caching is enabled,aws_api_gateway_stage,APIGatewayCacheEnable.py
+CKV_AWS_237,AWS,Ensure Create before destroy for API Gateway,aws_api_gateway_rest_api,APIGatewayCreateBeforeDestroy.py
+CKV_AWS_217,AWS,Ensure Create before destroy for API deployments,aws_api_gateway_deployment,APIGatewayDeploymentCreateBeforeDestroy.py
+CKV_AWS_206,AWS,Ensure API Gateway Domain uses a modern security Policy,aws_api_gateway_domain_name,APIGatewayDomainNameTLS.py
+CKV_AWS_225,AWS,Ensure API Gateway method setting caching is enabled,aws_api_gateway_method_settings,APIGatewayMethodSettingsCacheEnabled.py
+CKV_AWS_308,AWS,Ensure API Gateway method setting caching is set to encrypted,aws_api_gateway_method_settings,APIGatewayMethodSettingsCacheEncrypted.py
+CKV_AWS_276,AWS,Ensure Data Trace is not enabled in API Gateway Method Settings,,APIGatewayMethodSettingsDataTrace.py
+CKV_AWS_309,AWS,Ensure API GatewayV2 routes specify an authorization type,aws_apigatewayv2_route,APIGatewayV2RouteDefinesAuthorizationType.py
+CKV_AWS_73,AWS,Ensure API Gateway has X-Ray Tracing enabled,aws_api_gateway_stage,APIGatewayXray.py
+CKV_AWS_264,AWS,Ensure AppFlow connector profile uses CMK,aws_appflow_connector_profile,AppFlowConnectorProfileUsesCMK.py
+CKV_AWS_263,AWS,Ensure AppFlow flow uses CMK,aws_appflow_flow,AppFlowUsesCMK.py
+CKV_AWS_214,AWS,Ensure AppSync API Cache is encrypted at rest,aws_appsync_api_cache,AppsyncAPICacheEncryptionAtRest.py
+CKV_AWS_215,AWS,Ensure AppSync API Cache is encrypted in transit,aws_appsync_api_cache,AppsyncAPICacheEncryptionInTransit.py
+CKV_AWS_194,AWS,Ensure AppSync has Field-Level logs enabled,,AppSyncFieldLevelLogs.py
+CKV_AWS_193,AWS,Ensure AppSync has Logging enabled,,AppSyncLogging.py
+CKV_AWS_77,AWS,Ensure Athena Database is encrypted at rest (default is unencrypted),aws_athena_database,AthenaDatabaseEncryption.py
+CKV_AWS_82,AWS,Ensure Athena Workgroup should enforce configuration to prevent client disabling encryption,aws_athena_workgroup,AthenaWorkgroupConfiguration.py
+CKV_AWS_159,AWS,Ensure that Athena Workgroup is encrypted,,AthenaWorkgroupEncryption.py
+CKV_AWS_96,AWS,Ensure all data stored in Aurora is securely encrypted at rest,aws_rds_cluster,AuroraEncryption.py
+CKV_AWS_389,AWS,Ensure AWS Auto Scaling group launch configuration doesn,aws_launch_configuration,AutoScalingGroupWithPublicAccess.py
+CKV_AWS_315,AWS,Ensure EC2 Auto Scaling groups use EC2 launch templates,,AutoScalingLaunchTemplate.py
+CKV_AWS_153,AWS,Autoscaling groups should supply tags to launch configurations,aws_autoscaling_group,AutoScalingTagging.py
+CKV_AWS_166,AWS,Ensure Backup Vault is encrypted at rest using KMS CMK,,BackupVaultEncrypted.py
+CKV_AWS_210,AWS,Batch job does not define a privileged container,,BatchJobIsNotPrivileged.py
+CKV_AWS_373,AWS,Ensure Bedrock Agent is encrypted with a CMK,,BedrockAgentEncrypted.py
+CKV_AWS_383,AWS,Ensure AWS Bedrock agent is associated with Bedrock guardrails,,BedrockGuardrails.py
+CKV_AWS_124,AWS,Ensure that CloudFormation stacks are sending event notifications to an SNS topic,aws_cloudformation_stack,CloudformationStackNotificationArns.py
+CKV_AWS_305,AWS,Ensure CloudFront distribution has a default root object configured,aws_cloudfront_distribution,CloudfrontDistributionDefaultRoot.py
+CKV_AWS_216,AWS,Ensure CloudFront distribution is enabled,aws_cloudfront_distribution,CloudfrontDistributionEnabled.py
+CKV_AWS_34,AWS,Ensure CloudFront distribution ViewerProtocolPolicy is set to HTTPS,aws_cloudfront_distribution,CloudfrontDistributionEncryption.py
+CKV_AWS_86,AWS,Ensure CloudFront distribution has Access Logging enabled,aws_cloudfront_distribution,CloudfrontDistributionLogging.py
+CKV_AWS_310,AWS,Ensure CloudFront distributions should have origin failover configured,,CloudfrontDistributionOriginFailover.py
+CKV_AWS_374,AWS,Ensure AWS CloudFront web distribution has geo restriction enabled,,CloudFrontGeoRestrictionDisabled.py
+CKV_AWS_259,AWS,Ensure CloudFront response header policy enforces Strict Transport Security,,CloudFrontResponseHeaderStrictTransportSecurity.py
+CKV_AWS_174,AWS,Verify CloudFront Distribution Viewer Certificate is using TLS v1.2 or higher,,CloudfrontTLS12.py
+CKV_AWS_220,AWS,Ensure that CloudSearch is using https,aws_cloudsearch_domain,CloudsearchDomainEnforceHttps.py
+CKV_AWS_218,AWS,Ensure that CloudSearch is using latest TLS,,CloudsearchDomainTLS.py
+CKV_AWS_252,AWS,Ensure CloudTrail defines an SNS Topic,aws_cloudtrail,CloudtrailDefinesSNSTopic.py
+CKV_AWS_251,AWS,Ensure CloudTrail logging is enabled,aws_cloudtrail,CloudtrailEnableLogging.py
+CKV_AWS_35,AWS,Ensure CloudTrail logs are encrypted at rest using KMS CMKs,aws_cloudtrail,CloudtrailEncryptionWithCMK.py
+CKV_AWS_294,AWS,Ensure CloudTrail Event Data Store uses CMK,aws_cloudtrail_event_data_store,CloudtrailEventDataStoreUsesCMK.py
+CKV_AWS_36,AWS,Ensure CloudTrail log file validation is enabled,aws_cloudtrail,CloudtrailLogValidation.py
+CKV_AWS_67,AWS,Ensure CloudTrail is enabled in all Regions,aws_cloudtrail,CloudtrailMultiRegion.py
+CKV_AWS_319,AWS,Ensure that CloudWatch alarm actions are enabled,aws_cloudwatch_metric_alarm,CloudWatchAlarmsEnabled.py
+CKV_AWS_158,AWS,Ensure that CloudWatch Log Group is encrypted by KMS,aws_cloudwatch_log_group,CloudWatchLogGroupKMSKey.py
+CKV_AWS_66,AWS,Ensure that CloudWatch Log Group specifies retention days,,CloudWatchLogGroupRetention.py
+CKV_AWS_338,AWS,Ensure CloudWatch log groups retains logs for at least 1 year,,CloudWatchLogGroupRetentionYear.py
+CKV_AWS_221,AWS,Ensure CodeArtifact Domain is encrypted by KMS using a customer managed Key (CMK),aws_codeartifact_domain,CodeArtifactDomainEncryptedWithCMK.py
+CKV_AWS_314,AWS,Ensure CodeBuild project environments have a logging configuration,,CodebuildHasLogs.py
+CKV_AWS_316,AWS,Ensure CodeBuild project environments do not have privileged mode enabled,aws_codebuild_project,CodeBuildPrivilegedMode.py
+CKV_AWS_78,AWS,Ensure that CodeBuild Project encryption is not disabled,aws_codebuild_project,CodeBuildProjectEncryption.py
+CKV_AWS_311,AWS,Ensure that CodeBuild S3 logs are encrypted,,CodebuildS3LogsEncrypted.py
+CKV_AWS_147,AWS,Ensure that CodeBuild projects are encrypted using CMK,aws_codebuild_project,CodebuildUsesCMK.py
+CKV_AWS_257,AWS,Ensure CodeCommit branch changes have at least 2 approvals,aws_codecommit_approval_rule_template,CodecommitApprovalsRulesRequireMin2.py
+CKV_AWS_219,AWS,Ensure CodePipeline Artifact store is using a KMS CMK,,CodePipelineArtifactsEncrypted.py
+CKV_AWS_366,AWS,Ensure AWS Cognito identity pool does not allow unauthenticated guest access,aws_cognito_identity_pool,CognitoUnauthenticatedIdentities.py
+CKV_AWS_267,AWS,Ensure that Comprehend Entity Recognizer,aws_comprehend_entity_recognizer,ComprehendEntityRecognizerModelUsesCMK.py
+CKV_AWS_121,AWS,Ensure AWS Config is enabled in all regions,aws_config_configuration_aggregator,ConfigConfgurationAggregatorAllRegions.py
+CKV_AWS_269,AWS,Ensure Connect Instance Kinesis Video Stream Storage Config uses CMK,aws_connect_instance_storage_config,ConnectInstanceKinesisVideoStreamStorageConfigUsesCMK.py
+CKV_AWS_270,AWS,Ensure Connect Instance S3 Storage Config uses CMK,,ConnectInstanceS3StorageConfigUsesCMK.py
+CKV_AWS_295,AWS,Ensure DataSync Location Object Storage doesn,,DatasyncLocationExposesSecrets.py
+CKV_AWS_47,AWS,Ensure DAX is encrypted at rest (default is unencrypted),aws_dax_cluster,DAXEncryption.py
+CKV_AWS_239,AWS,Ensure DAX cluster endpoint is using TLS,aws_dax_cluster,DAXEndpointTLS.py
+CKV_AWS_133,AWS,Ensure that RDS instances has backup policy,,DBInstanceBackupRetentionPeriod.py
+CKV_AWS_129,AWS,Ensure that respective logs of Amazon Relational Database Service (Amazon RDS) are enabled,aws_db_instance,DBInstanceLogging.py
+CKV_AWS_226,AWS,Ensure DB instance gets all minor upgrades automatically,"aws_db_instance, aws_rds_cluster_instance",DBInstanceMinorUpgrade.py
+CKV_AWS_266,AWS,Ensure DB Snapshot copy uses CMK,aws_db_snapshot_copy,DBSnapshotCopyUsesCMK.py
+CKV_AWS_302,AWS,Ensure DB Snapshots are not Public,aws_db_snapshot,DBSnapshotsArePrivate.py
+CKV_AWS_363,AWS,Ensure Lambda Runtime is not deprecated,aws_lambda_function,DeprecatedLambdaRuntime.py
+CKV_AWS_253,AWS,Ensure DLM cross region events are encrypted,aws_dlm_lifecycle_policy,DLMEventsCrossRegionEncryption.py
+CKV_AWS_254,AWS,Ensure DLM cross region events are encrypted with Customer Managed Key,aws_dlm_lifecycle_policy,DLMEventsCrossRegionEncryptionWithCMK.py
+CKV_AWS_255,AWS,Ensure DLM cross region schedules are encrypted,aws_dlm_lifecycle_policy,DLMScheduleCrossRegionEncryption.py
+CKV_AWS_256,AWS,Ensure DLM cross region schedules are encrypted using a Customer Managed Key,aws_dlm_lifecycle_policy,DLMScheduleCrossRegionEncryptionWithCMK.py
+CKV_AWS_296,AWS,Ensure DMS endpoint uses Customer Managed Key (CMK),,DMSEndpointUsesCMK.py
+CKV_AWS_212,AWS,Ensure DMS replication instance is encrypted by KMS using a customer managed Key (CMK),aws_dms_replication_instance,DMSReplicationInstanceEncryptedWithCMK.py
+CKV_AWS_222,AWS,Ensure DMS replication instance gets all minor upgrade automatically,aws_dms_replication_instance,DMSReplicationInstanceMinorUpgrade.py
+CKV_AWS_89,AWS,DMS replication instance should not be publicly accessible,aws_dms_replication_instance,DMSReplicationInstancePubliclyAccessible.py
+CKV_AWS_298,AWS,Ensure DMS S3 uses Customer Managed Key (CMK),,DMSS3UsesCMK.py
+CKV_AWS_104,AWS,Ensure DocumentDB has audit logs enabled,,DocDBAuditLogs.py
+CKV_AWS_360,AWS,Ensure DocumentDB has an adequate backup retention period,aws_docdb_cluster,DocDBBackupRetention.py
+CKV_AWS_182,AWS,Ensure DocumentDB is encrypted by KMS using a customer managed Key (CMK),aws_docdb_cluster,DocDBEncryptedWithCMK.py
+CKV_AWS_74,AWS,Ensure DocumentDB is encrypted at rest (default is unencrypted),aws_docdb_cluster,DocDBEncryption.py
+CKV_AWS_292,AWS,Ensure DocumentDB Global Cluster is encrypted at rest (default is unencrypted),,DocDBGlobalClusterEncryption.py
+CKV_AWS_85,AWS,Ensure DocumentDB Logging is enabled,,DocDBLogging.py
+CKV_AWS_90,AWS,Ensure DocumentDB TLS is not disabled,aws_docdb_cluster_parameter_group,DocDBTLS.py
+CKV_AWS_165,AWS,Ensure DynamoDB point in time recovery (backup) is enabled for global tables,aws_dynamodb_global_table,DynamoDBGlobalTableRecovery.py
+CKV_AWS_28,AWS,Ensure DynamoDB point in time recovery (backup) is enabled,aws_dynamodb_table,DynamodbRecovery.py
+CKV_AWS_271,AWS,Ensure DynamoDB table replica KMS encryption uses CMK,,DynamoDBTableReplicaKMSUsesCMK.py
+CKV_AWS_119,AWS,Ensure DynamoDB Tables are encrypted using a KMS Customer Managed CMK,aws_dynamodb_table,DynamoDBTablesEncrypted.py
+CKV_AWS_106,AWS,Ensure EBS default encryption is enabled,,EBSDefaultEncryption.py
+CKV_AWS_3,AWS,Ensure all data stored in the EBS is securely encrypted,aws_ebs_volume,EBSEncryption.py
+CKV_AWS_183,AWS,Ensure EBS Snapshot Copy is encrypted by KMS using a customer managed Key (CMK),aws_ebs_snapshot_copy,EBSSnapshotCopyEncryptedWithCMK.py
+CKV_AWS_189,AWS,Ensure EBS Volume is encrypted by KMS using a customer managed Key (CMK),aws_ebs_volume,EBSVolumeEncryptedWithCMK.py
+CKV_AWS_46,AWS,Ensure no hard-coded secrets exist in EC2 user data,"aws_instance, aws_launch_template, aws_launch_configuration",EC2Credentials.py
+CKV_AWS_126,AWS,Ensure that detailed monitoring is enabled for EC2 instances,aws_instance,EC2DetailedMonitoringEnabled.py
+CKV_AWS_135,AWS,Ensure that EC2 is EBS optimized,aws_instance,EC2EBSOptimized.py
+CKV_AWS_88,AWS,EC2 instance should not have public IP.,"aws_instance, aws_launch_template",EC2PublicIP.py
+CKV_AWS_331,AWS,Ensure Transit Gateways do not automatically accept VPC attachment requests,aws_ec2_transit_gateway,Ec2TransitGatewayAutoAccept.py
+CKV_AWS_163,AWS,Ensure ECR image scanning on push is enabled,aws_ecr_repository,ECRImageScanning.py
+CKV_AWS_51,AWS,Ensure ECR Image Tags are immutable,,ECRImmutableTags.py
+CKV_AWS_32,AWS,Ensure ECR policy is not set to public,,ECRPolicy.py
+CKV_AWS_136,AWS,Ensure that ECR repositories are encrypted using KMS,aws_ecr_repository,ECRRepositoryEncrypted.py
+CKV_AWS_65,AWS,Ensure container insights are enabled on ECS cluster,aws_ecs_cluster,ECSClusterContainerInsights.py
+CKV_AWS_223,AWS,Ensure ECS Cluster enables logging of ECS Exec,aws_ecs_cluster,ECSClusterLoggingEnabled.py
+CKV_AWS_224,AWS,Ensure ECS Cluster logging is enabled and client to container communication uses CMK,,ECSClusterLoggingEncryptedWithCMK.py
+CKV_AWS_335,AWS,Ensure ECS task definitions should not share the host,,ECSContainerHostProcess.py
+CKV_AWS_334,AWS,Ensure ECS containers should run as non-privileged,,ECSContainerPrivilege.py
+CKV_AWS_336,AWS,Ensure ECS containers are limited to read-only access to root filesystems,,ECSContainerReadOnlyRoot.py
+CKV_AWS_332,AWS,Ensure ECS Fargate services run on the latest Fargate platform version,,ECSServiceFargateLatest.py
+CKV_AWS_333,AWS,Ensure ECS services do not have public IP addresses assigned to them automatically,aws_ecs_service,ECSServicePublicIP.py
+CKV_AWS_97,AWS,Ensure Encryption in transit is enabled for EFS volumes in ECS Task definitions,aws_ecs_task_definition,ECSTaskDefinitionEFSVolumeEncryption.py
+CKV_AWS_249,AWS,Ensure that the Execution Role ARN and the Task Role ARN are different in ECS Task definitions,,ECSTaskDefinitionRoleCheck.py
+CKV_AWS_329,AWS,EFS access points should enforce a root directory,aws_efs_access_point,EFSAccessPointRoot.py
+CKV_AWS_330,AWS,EFS access points should enforce a user identity,aws_efs_access_point,EFSAccessUserIdentity.py
+CKV_AWS_42,AWS,Ensure EFS is securely encrypted,aws_efs_file_system,EFSEncryptionEnabled.py
+CKV_AWS_184,AWS,Ensure resource is encrypted by KMS using a customer managed Key (CMK),aws_efs_file_system,EFSFileSystemEncryptedWithCMK.py
+CKV_AWS_37,AWS,Ensure Amazon EKS control plane logging is enabled for all log types,aws_eks_cluster,EKSControlPlaneLogging.py
+CKV_AWS_100,AWS,Ensure AWS EKS node group does not have implicit SSH access from 0.0.0.0/0,aws_eks_node_group,EKSNodeGroupRemoteAccess.py
+CKV_AWS_339,AWS,Ensure EKS clusters run on a supported Kubernetes version,,EKSPlatformVersion.py
+CKV_AWS_39,AWS,Ensure Amazon EKS public endpoint disabled,,EKSPublicAccess.py
+CKV_AWS_38,AWS,Ensure Amazon EKS public endpoint not accessible to 0.0.0.0/0,,EKSPublicAccessCIDR.py
+CKV_AWS_58,AWS,Ensure EKS Cluster has Secrets Encryption Enabled,aws_eks_cluster,EKSSecretsEncryption.py
+CKV_AWS_323,AWS,Ensure ElastiCache clusters do not use the default subnet group,,ElastiCacheHasCustomSubnet.py
+CKV_AWS_196,AWS,Ensure no aws_elasticache_security_group resources exist,aws_elasticache_security_group,ElasticacheHasSecurityGroup.py
+CKV_AWS_191,AWS,Ensure ElastiCache replication group is encrypted by KMS using a customer managed Key (CMK),aws_elasticache_replication_group,ElasticacheReplicationGroupEncryptedWithCMK.py
+CKV_AWS_29,AWS,Ensure all data stored in the ElastiCache Replication Group is securely encrypted at rest,aws_elasticache_replication_group,ElasticacheReplicationGroupEncryptionAtRest.py
+CKV_AWS_30,AWS,Ensure all data stored in the ElastiCache Replication Group is securely encrypted at transit,aws_elasticache_replication_group,ElasticacheReplicationGroupEncryptionAtTransit.py
+CKV_AWS_31,AWS,Ensure all data stored in the ElastiCache Replication Group is securely encrypted at transit and has auth token,aws_elasticache_replication_group,ElasticacheReplicationGroupEncryptionAtTransitAuthToken.py
+CKV_AWS_312,AWS,Ensure Elastic Beanstalk environments have enhanced health reporting enabled,,ElasticBeanstalkUseEnhancedHealthChecks.py
+CKV_AWS_340,AWS,Ensure Elastic Beanstalk managed platform updates are enabled,,ElasticBeanstalkUseManagedUpdates.py
+CKV_AWS_134,AWS,Ensure that Amazon ElastiCache Redis clusters have automatic backup turned on,aws_elasticache_cluster,ElasticCacheAutomaticBackup.py
+CKV_AWS_322,AWS,Ensure ElastiCache for Redis cache clusters have auto minor version upgrades enabled,aws_elasticache_cluster,ElasticCacheAutomaticMinorUpgrades.py
+CKV_AWS_248,AWS,Ensure that Elasticsearch is not using the default Security Group,"aws_elasticsearch_domain, aws_opensearch_domain",ElasticsearchDefaultSG.py
+CKV_AWS_317,AWS,Ensure Elasticsearch Domain Audit Logging is enabled,,ElasticsearchDomainAuditLogging.py
+CKV_AWS_83,AWS,Ensure Elasticsearch Domain enforces HTTPS,"aws_elasticsearch_domain, aws_opensearch_domain",ElasticsearchDomainEnforceHTTPS.py
+CKV_AWS_318,AWS,Ensure Elasticsearch domains are configured with at least three dedicated master nodes for HA,,ElasticsearchDomainHA.py
+CKV_AWS_84,AWS,Ensure Elasticsearch Domain Logging is enabled,"aws_elasticsearch_domain, aws_opensearch_domain",ElasticsearchDomainLogging.py
+CKV_AWS_5,AWS,Ensure all data stored in the Elasticsearch is securely encrypted at rest,,ElasticsearchEncryption.py
+CKV_AWS_247,AWS,Ensure all data stored in the Elasticsearch is encrypted with a CMK,,ElasticsearchEncryptionWithCMK.py
+CKV_AWS_137,AWS,Ensure that Elasticsearch is configured inside a VPC,"aws_elasticsearch_domain, aws_opensearch_domain",ElasticsearchInVPC.py
+CKV_AWS_6,AWS,Ensure all Elasticsearch has node-to-node encryption enabled,"aws_elasticsearch_domain, aws_opensearch_domain",ElasticsearchNodeToNodeEncryption.py
+CKV_AWS_228,AWS,Verify Elasticsearch domain is using an up to date TLS policy,,ElasticsearchTLSPolicy.py
+CKV_AWS_92,AWS,Ensure the ELB has access logging enabled,aws_elb,ELBAccessLogs.py
+CKV_AWS_138,AWS,Ensure that ELB is cross-zone-load-balancing enabled,aws_elb,ELBCrossZoneEnable.py
+CKV_AWS_213,AWS,Ensure ELB Policy uses only secure protocols,aws_load_balancer_policy,ELBPolicyUsesSecureProtocols.py
+CKV_AWS_127,AWS,Ensure that Elastic Load Balancer(s) uses SSL certificates provided by AWS Certificate Manager,aws_elb,ELBUsesSSL.py
+CKV_AWS_91,AWS,Ensure the ELBv2 (Application/Network) has access logging enabled,"aws_lb, aws_alb",ELBv2AccessLogs.py
+CKV_AWS_376,AWS,Ensure AWS Elastic Load Balancer listener uses TLS/SSL,,ELBwListenerNotTLSSSL.py
+CKV_AWS_350,AWS,Ensure EMR Cluster security configuration encrypts EBS disks,,EMRClusterConfEncryptsEBS.py
+CKV_AWS_351,AWS,Ensure EMR Cluster security configuration encrypts InTransit,,EMRClusterConfEncryptsInTransit.py
+CKV_AWS_349,AWS,Ensure EMR Cluster security configuration encrypts local disks,,EMRClusterConfEncryptsLocalDisk.py
+CKV_AWS_171,AWS,Ensure EMR Cluster security configuration encryption is using SSE-KMS,aws_emr_security_configuration,EMRClusterIsEncryptedKMS.py
+CKV_AWS_114,AWS,Ensure that EMR clusters with Kerberos have Kerberos Realm set,aws_emr_cluster,EMRClusterKerberosAttributes.py
+CKV_AWS_390,AWS,Ensure AWS EMR block public access setting is enabled,aws_emr_block_public_access_configuration,EMRPubliclyAccessible.py
+CKV_AWS_178,AWS,Ensure fx ontap file system is encrypted by KMS using a customer managed Key (CMK),aws_fsx_ontap_file_system,FSXOntapFSEncryptedWithCMK.py
+CKV_AWS_203,AWS,Ensure resource is encrypted by KMS using a customer managed Key (CMK),aws_fsx_openzfs_file_system,FSXOpenZFSFileSystemEncryptedWithCMK.py
+CKV_AWS_179,AWS,Ensure FSX Windows filesystem is encrypted by KMS using a customer managed Key (CMK),aws_fsx_windows_file_system,FSXWindowsFSEncryptedWithCMK.py
+CKV_AWS_167,AWS,Ensure Glacier Vault access policy is not public by only allowing specific services or principals to access it,,GlacierVaultAnyPrincipal.py
+CKV_AWS_75,AWS,Ensure Global Accelerator accelerator has flow logs enabled,aws_globalaccelerator_accelerator,GlobalAcceleratorAcceleratorFlowLogs.py
+CKV_AWS_94,AWS,Ensure Glue Data Catalog Encryption is enabled,aws_glue_data_catalog_encryption_settings,GlueDataCatalogEncryption.py
+CKV_AWS_99,AWS,Ensure Glue Security Configuration Encryption is enabled,aws_glue_security_configuration,GlueSecurityConfiguration.py
+CKV_AWS_195,AWS,Ensure Glue component has a security configuration associated,,GlueSecurityConfigurationEnabled.py
+CKV_AWS_238,AWS,Ensure that GuardDuty detector is enabled,aws_guardduty_detector,GuarddutyDetectorEnabled.py
+CKV_AWS_62,AWS,Ensure IAM policies that allow full ,,IAMAdminPolicyDocument.py
+CKV_AWS_287,AWS,Ensure IAM policies does not allow credentials exposure,,IAMCredentialsExposure.py
+CKV_AWS_288,AWS,Ensure IAM policies does not allow data exfiltration,,IAMDataExfiltration.py
+CKV_AWS_289,AWS,Ensure IAM policies does not allow permissions management / resource exposure without constraints,,IAMPermissionsManagement.py
+CKV_AWS_40,AWS,Ensure IAM policies are attached only to groups or roles (Reducing access management complexity may ,,IAMPolicyAttachedToGroupOrRoles.py
+CKV_AWS_286,AWS,Ensure IAM policies does not allow privilege escalation,,IAMPrivilegeEscalation.py
+CKV_AWS_61,AWS,Ensure AWS IAM policy does not allow assume role permission across all services,,IAMRoleAllowAssumeFromAccount.py
+CKV_AWS_60,AWS,Ensure IAM role allows only specific services or principals to assume it,aws_iam_role,IAMRoleAllowsPublicAssume.py
+CKV_AWS_63,AWS,Ensure no IAM policies documents allow ,,IAMStarActionPolicyDocument.py
+CKV_AWS_355,AWS,Ensure no IAM policies documents allow ,,IAMStarResourcePolicyDocument.py
+CKV_AWS_273,AWS,Ensure access is controlled through SSO and not AWS IAM defined users,,IAMUserNotUsedForAccess.py
+CKV_AWS_348,AWS,Ensure IAM root user does not have Access keys,aws_iam_access_key,IAMUserRootAccessKeys.py
+CKV_AWS_290,AWS,Ensure IAM policies does not allow write access without constraints,,IAMWriteAccess.py
+CKV_AWS_180,AWS,Ensure Image Builder component is encrypted by KMS using a customer managed Key (CMK),aws_imagebuilder_component,ImagebuilderComponentEncryptedWithCMK.py
+CKV_AWS_199,AWS,Ensure Image Builder Distribution Configuration encrypts AMI,aws_imagebuilder_distribution_configuration,ImagebuilderDistributionConfigurationEncryptedWithCMK.py
+CKV_AWS_200,AWS,Ensure that Image Recipe EBS Disk are encrypted with CMK,,ImagebuilderImageRecipeEBSEncrypted.py
+CKV_AWS_79,AWS,Ensure Instance Metadata Service Version 1 is not enabled,,IMDSv1Disabled.py
+CKV_AWS_262,AWS,Ensure Kendra index Server side encryption uses CMK,aws_kendra_index,KendraIndexSSEUsesCMK.py
+CKV_AWS_265,AWS,Ensure Keyspaces Table uses CMK,aws_keyspaces_table,KeyspacesTableUsesCMK.py
+CKV_AWS_240,AWS,Ensure Kinesis Firehose delivery stream is encrypted,aws_kinesis_firehose_delivery_stream,KinesisFirehoseDeliveryStreamSSE.py
+CKV_AWS_241,AWS,Ensure that Kinesis Firehose Delivery Streams are encrypted with CMK,aws_kinesis_firehose_delivery_stream,KinesisFirehoseDeliveryStreamUsesCMK.py
+CKV_AWS_185,AWS,Ensure Kinesis Stream is encrypted by KMS using a customer managed Key (CMK),aws_kinesis_stream,KinesisStreamEncryptedWithCMK.py
+CKV_AWS_43,AWS,Ensure Kinesis Stream is securely encrypted,aws_kinesis_stream,KinesisStreamEncryptionType.py
+CKV_AWS_177,AWS,Ensure Kinesis Video Stream is encrypted by KMS using a customer managed Key (CMK),aws_kinesis_video_stream,KinesisVideoEncryptedWithCMK.py
+CKV_AWS_227,AWS,Ensure KMS key is enabled,,KMSKeyIsEnabled.py
+CKV_AWS_33,AWS,Ensure KMS key policy does not contain wildcard (*) principal,aws_kms_key,KMSKeyWildcardPrincipal.py
+CKV_AWS_7,AWS,Ensure rotation for customer created CMKs is enabled,aws_kms_key,KMSRotation.py
+CKV_AWS_272,AWS,Ensure AWS Lambda function is configured to validate code-signing,aws_lambda_function,LambdaCodeSigningConfigured.py
+CKV_AWS_116,AWS,Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ),aws_lambda_function,LambdaDLQConfigured.py
+CKV_AWS_45,AWS,Ensure no hard-coded secrets exist in lambda environment,aws_lambda_function,LambdaEnvironmentCredentials.py
+CKV_AWS_173,AWS,Check encryption settings for Lambda environmental variable,,LambdaEnvironmentEncryptionSettings.py
+CKV_AWS_301,AWS,Ensure that AWS Lambda function is not publicly accessible,,LambdaFunctionIsNotPublic.py
+CKV_AWS_115,AWS,Ensure that AWS Lambda function is configured for function-level concurrent execution limit,,LambdaFunctionLevelConcurrentExecutionLimit.py
+CKV_AWS_258,AWS,Ensure that Lambda function URLs AuthType is not None,aws_lambda_function_url,LambdaFunctionURLAuth.py
+CKV_AWS_117,AWS,Ensure that AWS Lambda function is configured inside a VPC,,LambdaInVPC.py
+CKV_AWS_50,AWS,X-Ray tracing is enabled for Lambda,aws_lambda_function,LambdaXrayEnabled.py
+CKV_AWS_341,AWS,Ensure Launch template should not have a metadata response hop limit greater than 1,,LaunchTemplateMetadataHop.py
+CKV_AWS_152,AWS,Ensure that Load Balancer (Network/Gateway) has cross-zone load balancing enabled,"aws_lb, aws_alb",LBCrossZone.py
+CKV_AWS_150,AWS,Ensure that Load Balancer has deletion protection enabled,"aws_lb, aws_alb",LBDeletionProtection.py
+CKV_AWS_261,AWS,Ensure HTTP HTTPS Target group defines Healthcheck,,LBTargetGroupsDefinesHealthcheck.py
+CKV_AWS_190,AWS,Ensure lustre file systems is encrypted by KMS using a customer managed Key (CMK),aws_fsx_lustre_file_system,LustreFSEncryptedWithCMK.py
+CKV_AWS_202,AWS,Ensure MemoryDB data is encrypted in transit,,MemoryDBClusterIntransitEncryption.py
+CKV_AWS_201,AWS,Ensure MemoryDB is encrypted at rest using KMS CMKs,aws_memorydb_cluster,MemoryDBEncryptionWithCMK.py
+CKV_AWS_278,AWS,Ensure MemoryDB snapshot is encrypted by KMS using a customer managed Key (CMK),,MemoryDBSnapshotEncryptionWithCMK.py
+CKV_AWS_197,AWS,Ensure MQ Broker Audit logging is enabled,,MQBrokerAuditLogging.py
+CKV_AWS_209,AWS,Ensure MQ broker encrypted by KMS using a customer managed Key (CMK),aws_mq_broker,MQBrokerEncryptedWithCMK.py
+CKV_AWS_48,AWS,Ensure MQ Broker logging is enabled,aws_mq_broker,MQBrokerLogging.py
+CKV_AWS_207,AWS,Ensure MQ Broker minor version updates are enabled,aws_mq_broker,MQBrokerMinorAutoUpgrade.py
+CKV_AWS_69,AWS,Ensure MQ Broker is not publicly exposed,,MQBrokerNotPubliclyExposed.py
+CKV_AWS_208,AWS,Ensure MQ Broker version is current,,MQBrokerVersion.py
+CKV_AWS_81,AWS,Ensure MSK Cluster encryption in rest and transit is enabled,aws_msk_cluster,MSKClusterEncryption.py
+CKV_AWS_80,AWS,Ensure MSK Cluster logging is enabled,aws_msk_cluster,MSKClusterLogging.py
+CKV_AWS_291,AWS,Ensure MSK nodes are private,,MSKClusterNodesArePrivate.py
+CKV_AWS_242,AWS,Ensure MWAA environment has scheduler logs enabled,aws_mwaa_environment,MWAASchedulerLogsEnabled.py
+CKV_AWS_244,AWS,Ensure MWAA environment has webserver logs enabled,,MWAAWebserverLogsEnabled.py
+CKV_AWS_243,AWS,Ensure MWAA environment has worker logs enabled,aws_mwaa_environment,MWAAWorkerLogsEnabled.py
+CKV_AWS_347,AWS,Ensure Neptune is encrypted by KMS using a customer managed Key (CMK),,NeptuneClusterEncryptedWithCMK.py
+CKV_AWS_102,AWS,Ensure Neptune Cluster instance is not publicly available,aws_neptune_cluster_instance,NeptuneClusterInstancePublic.py
+CKV_AWS_101,AWS,Ensure Neptune logging is enabled,aws_neptune_cluster,NeptuneClusterLogging.py
+CKV_AWS_279,AWS,Ensure Neptune snapshot is securely encrypted,,NeptuneClusterSnapshotEncrypted.py
+CKV_AWS_280,AWS,Ensure Neptune snapshot is encrypted by KMS using a customer managed Key (CMK),,NeptuneClusterSnapshotEncryptedWithCMK.py
+CKV_AWS_44,AWS,Ensure Neptune storage is securely encrypted,aws_neptune_cluster,NeptuneClusterStorageEncrypted.py
+CKV_AWS_352,AWS,Ensure NACL ingress does not allow all Ports,,NetworkACLUnrestricted.py
+CKV_AWS_344,AWS,Ensure that Network firewalls have deletion protection enabled,aws_networkfirewall_firewall,NetworkFirewallDeletionProtection.py
+CKV_AWS_346,AWS,Ensure Network Firewall Policy defines an encryption configuration that uses a ,,NetworkFirewallPolicyDefinesCMK.py
+CKV_AWS_345,AWS,Ensure that Network firewall encryption is via a CMK,"aws_networkfirewall_firewall, aws_networkfirewall_rule_group",NetworkFirewallUsesCMK.py
+CKV_AWS_9,AWS,Ensure IAM password policy expires passwords within 90 days or less,aws_iam_account_password_policy,PasswordPolicyExpiration.py
+CKV_AWS_10,AWS,Ensure IAM password policy requires minimum length of 14 or greater,aws_iam_account_password_policy,PasswordPolicyLength.py
+CKV_AWS_11,AWS,Ensure IAM password policy requires at least one lowercase letter,aws_iam_account_password_policy,PasswordPolicyLowercaseLetter.py
+CKV_AWS_12,AWS,Ensure IAM password policy requires at least one number,aws_iam_account_password_policy,PasswordPolicyNumber.py
+CKV_AWS_13,AWS,Ensure IAM password policy prevents password reuse,aws_iam_account_password_policy,PasswordPolicyReuse.py
+CKV_AWS_14,AWS,Ensure IAM password policy requires at least one symbol,aws_iam_account_password_policy,PasswordPolicySymbol.py
+CKV_AWS_15,AWS,Ensure IAM password policy requires at least one uppercase letter,aws_iam_account_password_policy,PasswordPolicyUppercaseLetter.py
+CKV_AWS_172,AWS,Ensure QLDB ledger has deletion protection enabled,aws_qldb_ledger,QLDBLedgerDeletionProtection.py
+CKV_AWS_170,AWS,Ensure QLDB ledger permissions mode is set to STANDARD,aws_qldb_ledger,QLDBLedgerPermissionsMode.py
+CKV_AWS_211,AWS,Ensure RDS uses a modern CaCert,aws_db_instance,RDSCACertIsRecent.py
+CKV_AWS_246,AWS,Ensure RDS Cluster activity streams are encrypted using KMS CMKs,aws_rds_cluster_activity_stream,RDSClusterActivityStreamEncryptedWithCMK.py
+CKV_AWS_325,AWS,Ensure that RDS Cluster audit logging is enabled for MySQL engine,,RDSClusterAuditLogging.py
+CKV_AWS_326,AWS,Ensure that RDS Aurora Clusters have backtracking enabled,,RDSClusterAuroraBacktrack.py
+CKV_AWS_313,AWS,Ensure RDS cluster configured to copy tags to snapshots,,RDSClusterCopyTags.py
+CKV_AWS_140,AWS,Ensure that RDS global clusters are encrypted,aws_rds_global_cluster,RDSClusterEncrypted.py
+CKV_AWS_327,AWS,Ensure RDS Clusters are encrypted using KMS CMKs,aws_rds_cluster,RDSClusterEncryptedWithCMK.py
+CKV_AWS_162,AWS,Ensure RDS cluster has IAM authentication enabled,aws_rds_cluster,RDSClusterIAMAuthentication.py
+CKV_AWS_324,AWS,Ensure that RDS Cluster log capture is enabled,,RDSClusterLogging.py
+CKV_AWS_146,AWS,Ensure that RDS database cluster snapshot is encrypted,aws_db_cluster_snapshot,RDSClusterSnapshotEncrypted.py
+CKV_AWS_139,AWS,Ensure that RDS clusters have deletion protection enabled,aws_rds_cluster,RDSDeletionProtection.py
+CKV_AWS_16,AWS,Ensure all data stored in the RDS is securely encrypted at rest,aws_db_instance,RDSEncryption.py
+CKV_AWS_118,AWS,Ensure that enhanced monitoring is enabled for Amazon RDS instances,,RDSEnhancedMonitorEnabled.py
+CKV_AWS_198,AWS,Ensure no aws_db_security_group resources exist,aws_db_security_group,RDSHasSecurityGroup.py
+CKV_AWS_161,AWS,Ensure RDS database has IAM authentication enabled,aws_db_instance,RDSIAMAuthentication.py
+CKV_AWS_245,AWS,Ensure replicated backups are encrypted at rest using KMS CMKs,aws_db_instance_automated_backups_replication,RDSInstanceAutoBackupEncryptionWithCMK.py
+CKV_AWS_293,AWS,Ensure that AWS database instances have deletion protection enabled,aws_db_instance,RDSInstanceDeletionProtection.py
+CKV_AWS_354,AWS,Ensure RDS Performance Insights are encrypted using KMS CMKs,"aws_rds_cluster_instance, aws_db_instance",RDSInstancePerfInsightsEncryptionWithCMK.py
+CKV_AWS_353,AWS,Ensure that RDS instances have performance insights enabled,,RDSInstancePerformanceInsights.py
+CKV_AWS_157,AWS,Ensure that RDS instances have Multi-AZ enabled,aws_db_instance,RDSMultiAZEnabled.py
+CKV_AWS_250,AWS,Ensure that RDS PostgreSQL instances use a non vulnerable version with the log_fdw extension (https://aws.amazon.com/security/security-bulletins/AWS-2022-004/),,RDSPostgreSQLLogFDWExtension.py
+CKV_AWS_17,AWS,Ensure all data stored in RDS is not publicly accessible,"aws_db_instance, aws_rds_cluster_instance",RDSPubliclyAccessible.py
+CKV_AWS_141,AWS,Ensured that Redshift cluster allowing version upgrade by default,aws_redshift_cluster,RedshiftClusterAllowVersionUpgrade.py
+CKV_AWS_343,AWS,Ensure Amazon Redshift clusters should have automatic snapshots enabled,aws_redshift_cluster,RedshiftClusterAutoSnap.py
+CKV_AWS_320,AWS,Ensure Redshift clusters do not use the default database name,,RedshiftClusterDatabaseName.py
+CKV_AWS_64,AWS,Ensure all data stored in the Redshift cluster is securely encrypted at rest,aws_redshift_cluster,RedshiftClusterEncryption.py
+CKV_AWS_142,AWS,Ensure that Redshift cluster is encrypted by KMS,aws_redshift_cluster,RedshiftClusterKMSKey.py
+CKV_AWS_71,AWS,Ensure Redshift Cluster logging is enabled,,RedshiftClusterLogging.py
+CKV_AWS_281,AWS,Ensure RedShift snapshot copy is encrypted by KMS using a customer managed Key (CMK),,RedshiftClusterSnapshotCopyGrantEncryptedWithCMK.py
+CKV_AWS_321,AWS,Ensure Redshift clusters use enhanced VPC routing,aws_redshift_cluster,RedshiftClusterUseEnhancedVPCRouting.py
+CKV_AWS_391,AWS,Avoid AWS Redshift cluster with commonly used master username and public access setting enabled,aws_redshift_cluster,RedshiftClusterWithCommonUsernameAndPublicAccess.py
+CKV_AWS_154,AWS,Ensure Redshift is not deployed outside of a VPC,aws_redshift_cluster,RedshiftInEc2ClassicMode.py
+CKV_AWS_282,AWS,Ensure that Redshift Serverless namespace is encrypted by KMS using a customer managed key (CMK),,RedshiftServerlessNamespaceKMSKey.py
+CKV_AWS_105,AWS,Ensure Redshift uses SSL,aws_redshift_parameter_group,RedShiftSSL.py
+CKV_AWS_87,AWS,Redshift cluster should not be publicly accessible,aws_redshift_cluster,RedshitClusterPubliclyAvailable.py
+CKV_AWS_377,AWS,Ensure Route 53 domains have transfer lock protection,,Route53TransferLock.py
+CKV_AWS_300,AWS,Ensure S3 lifecycle configuration sets period for aborting failed uploads,,S3AbortIncompleteUploads.py
+CKV_AWS_392,AWS,Ensure AWS S3 access point block public access setting is enabled,aws_s3_access_point,S3AccessPointPubliclyAccessible.py
+CKV_AWS_70,AWS,Ensure S3 bucket does not allow an action with any Principal,"aws_s3_bucket, aws_s3_bucket_policy",S3AllowsAnyPrincipal.py
+CKV_AWS_53,AWS,Ensure S3 bucket has block public ACLS enabled,aws_s3_bucket_public_access_block,S3BlockPublicACLs.py
+CKV_AWS_54,AWS,Ensure S3 bucket has block public policy enabled,aws_s3_bucket_public_access_block,S3BlockPublicPolicy.py
+CKV_AWS_186,AWS,Ensure S3 bucket Object is encrypted by KMS using a customer managed Key (CMK),aws_s3_bucket_object,S3BucketObjectEncryptedWithCMK.py
+CKV_AWS_143,AWS,Ensure that S3 bucket has lock configuration enabled by default,aws_s3_bucket,S3BucketObjectLock.py
+CKV_AWS_375,AWS,Ensure AWS S3 bucket does not have global view ACL permissions enabled,,S3GlobalViewACL.py
+CKV_AWS_55,AWS,Ensure S3 bucket has ignore public ACLs enabled,aws_s3_bucket_public_access_block,S3IgnorePublicACLs.py
+CKV_AWS_181,AWS,Ensure S3 Object Copy is encrypted by KMS using a customer managed Key (CMK),aws_s3_object_copy,S3ObjectCopyEncryptedWithCMK.py
+CKV_AWS_93,AWS,Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes),,S3ProtectAgainstPolicyLockout.py
+CKV_AWS_56,AWS,Ensure S3 bucket has ,aws_s3_bucket_public_access_block,S3RestrictPublicBuckets.py
+CKV_AWS_379,AWS,Ensure AWS S3 bucket is configured with secure data transport policy,,S3SecureDataTransport.py
+CKV_AWS_367,AWS,Ensure Amazon Sagemaker Data Quality Job uses KMS to encrypt model artifacts,aws_sagemaker_data_quality_job_definition,SagemakerDataQualityJobDefinitionEncryption.py
+CKV_AWS_369,AWS,Ensure Amazon Sagemaker Data Quality Job encrypts all communications between instances used for monitoring jobs,aws_sagemaker_data_quality_job_definition,SagemakerDataQualityJobDefinitionTrafficEncryption.py
+CKV_AWS_368,AWS,Ensure Amazon Sagemaker Data Quality Job uses KMS to encrypt data on attached storage volume,aws_sagemaker_data_quality_job_definition,SagemakerDataQualityJobDefinitionVolumeEncryption.py
+CKV_AWS_187,AWS,Ensure Sagemaker domain and notebook instance are encrypted by KMS using a customer managed Key (CMK),"aws_sagemaker_domain, aws_sagemaker_notebook_instance",SagemakerDomainEncryptedWithCMK.py
+CKV_AWS_98,AWS,Ensure all data stored in the Sagemaker Endpoint is securely encrypted at rest,aws_sagemaker_endpoint_configuration,SagemakerEndpointConfigurationEncryption.py
+CKV_AWS_372,AWS,Ensure Amazon SageMaker Flow Definition uses KMS for output configurations,aws_sagemaker_flow_definition,SagemakerFlowDefinitionUsesKMS.py
+CKV_AWS_122,AWS,Ensure that direct internet access is disabled for an Amazon SageMaker Notebook Instance,aws_sagemaker_notebook_instance,SageMakerInternetAccessDisabled.py
+CKV_AWS_370,AWS,Ensure Amazon SageMaker model uses network isolation,aws_sagemaker_model,SagemakerModelWithNetworkIsolation.py
+CKV_AWS_22,AWS,Ensure SageMaker Notebook is encrypted at rest using KMS CMK,aws_sagemaker_notebook_instance,SagemakerNotebookEncryption.py
+CKV_AWS_306,AWS,Ensure SageMaker notebook instances should be launched into a custom VPC,aws_sagemaker_notebook_instance,SagemakerNotebookInCustomVPC.py
+CKV_AWS_371,AWS,Ensure Amazon SageMaker Notebook Instance only allows for IMDSv2,aws_sagemaker_notebook_instance,SagemakerNotebookInstanceAllowsIMDSv2.py
+CKV_AWS_307,AWS,Ensure SageMaker Users should not have root access to SageMaker notebook instances,aws_sagemaker_notebook_instance,SagemakerNotebookRoot.py
+CKV_AWS_297,AWS,Ensure EventBridge Scheduler Schedule uses Customer Managed Key (CMK),,SchedulerScheduleUsesCMK.py
+CKV_AWS_304,AWS,Ensure Secrets Manager secrets should be rotated within 90 days,,SecretManagerSecret90days.py
+CKV_AWS_149,AWS,Ensure that Secrets Manager secret is encrypted using KMS CMK,aws_secretsmanager_secret,SecretManagerSecretEncrypted.py
+CKV_AWS_23,AWS,Ensure every security group and rule has a description,,SecurityGroupRuleDescription.py
+CKV_AWS_365,AWS,Ensure SES Configuration Set enforces TLS usage,aws_ses_configuration_set,SesConfigurationSetDefinesTLS.py
+CKV_AWS_385,AWS,Ensure AWS SNS topic policies do not allow cross-account access,,SNSCrossAccountAccess.py
+CKV_AWS_26,AWS,Ensure all data stored in the SNS topic is encrypted,,SNSTopicEncryption.py
+CKV_AWS_169,AWS,Ensure SNS topic policy is not public by only allowing specific services or principals to access it,,SNSTopicPolicyAnyPrincipal.py
+CKV_AWS_387,AWS,Ensure SQS policy does not allow public access through wildcards,aws_sqs_queue_policy,SQSOverlyPermissive.py
+CKV_AWS_72,AWS,Ensure SQS policy does not allow ALL (*) actions.,aws_sqs_queue_policy,SQSPolicy.py
+CKV_AWS_27,AWS,Ensure all data stored in the SQS queue is encrypted,,SQSQueueEncryption.py
+CKV_AWS_168,AWS,Ensure SQS queue policy is not public by only allowing specific services or principals to access it,,SQSQueuePolicyAnyPrincipal.py
+CKV_AWS_303,AWS,Ensure SSM documents are not Public,aws_ssm_document,SSMDocumentsArePrivate.py
+CKV_AWS_337,AWS,Ensure SSM parameters are using KMS CMK,,SSMParameterUsesCMK.py
+CKV_AWS_112,AWS,Ensure Session Manager data is encrypted in transit,aws_ssm_document,SSMSessionManagerDocumentEncryption.py
+CKV_AWS_113,AWS,Ensure Session Manager logs are enabled and encrypted,aws_ssm_document,SSMSessionManagerDocumentLogging.py
+CKV_AWS_285,AWS,Ensure State Machine has execution history logging enabled,aws_sfn_state_machine,StateMachineLoggingExecutionHistory.py
+CKV_AWS_284,AWS,Ensure State Machine has X-Ray tracing enabled,aws_sfn_state_machine,StateMachineXray.py
+CKV_AWS_130,AWS,Ensure VPC subnets do not assign public IP by default,aws_subnet,SubnetPublicIP.py
+CKV_AWS_160,AWS,Ensure that Timestream database is encrypted with KMS CMK,aws_timestreamwrite_database,TimestreamDatabaseKMSKey.py
+CKV_AWS_357,AWS,Ensure Transfer Server allows only secure protocols,,TransferServerAllowsOnlySecureProtocols.py
+CKV_AWS_164,AWS,Ensure Transfer Server is not exposed publicly.,,TransferServerIsPublic.py
+CKV_AWS_380,AWS,Ensure AWS Transfer Server uses latest Security Policy,,TransferServerLatestPolicy.py
+CKV_AWS_388,AWS,Ensure AWS Aurora PostgreSQL is not exposed to local file read vulnerability,aws_db_instance,UnpatchedAuroraPostgresDB.py
+CKV_AWS_148,AWS,Ensure no default VPC is planned to be provisioned,,VPCDefaultNetwork.py
+CKV_AWS_123,AWS,Ensure that VPC Endpoint Service is configured for Manual Acceptance,aws_vpc_endpoint_service,VPCEndpointAcceptanceConfigured.py
+CKV_AWS_192,AWS,Ensure WAF prevents message lookup in Log4j2. See CVE-2021-44228 aka log4jshell,aws_wafv2_web_acl,WAFACLCVE202144228.py
+CKV_AWS_68,AWS,CloudFront Distribution should have WAF enabled,aws_cloudfront_distribution,WAFEnabled.py
+CKV_AWS_175,AWS,Ensure WAF has associated rules,"aws_waf_web_acl, aws_wafregional_web_acl, aws_wafv2_web_acl",WAFHasAnyRules.py
+CKV_AWS_176,AWS,Ensure Logging is enabled for WAF Web Access Control Lists,,WAFHasLogs.py
+CKV_AWS_342,AWS,Ensure WAF rule has any actions,,WAFRuleHasAnyActions.py
+CKV_AWS_156,AWS,Ensure that Workspace root volumes are encrypted,aws_workspaces_workspace,WorkspaceRootVolumeEncrypted.py
+CKV_AWS_155,AWS,Ensure that Workspace user volumes are encrypted,aws_workspaces_workspace,WorkspaceUserVolumeEncrypted.py
+CKV_AZURE_137,Azure,Ensure ACR admin account is disabled,azurerm_container_registry,ACRAdminAccountDisabled.py
+CKV_AZURE_138,Azure,Ensures that ACR disables anonymous pulling of images,,ACRAnonymousPullDisabled.py
+CKV_AZURE_163,Azure,Enable vulnerability scanning for container images.,,ACRContainerScanEnabled.py
+CKV_AZURE_237,Azure,Ensure dedicated data endpoints are enabled.,,ACRDedicatedDataEndpointEnabled.py
+CKV_AZURE_166,Azure,"Ensure container image quarantine, scan, and mark images verified",,ACREnableImageQuarantine.py
+CKV_AZURE_167,Azure,Ensure a retention policy is set to cleanup untagged manifests.,,ACREnableRetentionPolicy.py
+CKV_AZURE_233,Azure,Ensure Azure Container Registry (ACR) is zone redundant,,ACREnableZoneRedundancy.py
+CKV_AZURE_165,Azure,Ensure geo-replicated container registries to match multi-region container deployments.,,ACRGeoreplicated.py
+CKV_AZURE_139,Azure,Ensure ACR set to disable public networking,azurerm_container_registry,ACRPublicNetworkAccessDisabled.py
+CKV_AZURE_164,Azure,Ensures that ACR uses signed/trusted images,,ACRUseSignedImages.py
+CKV_AZURE_126,Azure,Ensures that Active Directory is used for authentication for Service Fabric,azurerm_service_fabric_cluster,ActiveDirectoryUsedAuthenticationServiceFabric.py
+CKV_AZURE_6,Azure,Ensure AKS has an API Server Authorized IP Ranges enabled,,AKSApiServerAuthorizedIpRanges.py
+CKV_AZURE_8,Azure,Ensure Kubernetes Dashboard is disabled,azurerm_kubernetes_cluster,AKSDashboardDisabled.py
+CKV_AZURE_115,Azure,Ensure that AKS enables private clusters,azurerm_kubernetes_cluster,AKSEnablesPrivateClusters.py
+CKV_AZURE_227,Azure,"Ensure that the AKS cluster encrypt temp disks, caches, and data flows ",,AKSEncryptionAtHostEnabled.py
+CKV_AZURE_226,Azure,Ensure ephemeral disks are used for OS disks,,AKSEphemeralOSDisks.py
+CKV_AZURE_170,Azure,Ensure that AKS use the Paid Sku for its SLA,,AKSIsPaidSku.py
+CKV_AZURE_141,Azure,Ensure AKS local admin account is disabled,azurerm_kubernetes_cluster,AKSLocalAdminDisabled.py
+CKV_AZURE_4,Azure,Ensure AKS logging to Azure Monitoring is Configured,azurerm_kubernetes_cluster,AKSLoggingEnabled.py
+CKV_AZURE_168,Azure,Ensure Azure Kubernetes Cluster (AKS) nodes should use a minimum number of 50 pods.,,AKSMaxPodsMinimum.py
+CKV_AZURE_7,Azure,Ensure AKS cluster has Network Policy configured,azurerm_kubernetes_cluster,AKSNetworkPolicy.py
+CKV_AZURE_143,Azure,Ensure AKS cluster nodes do not have public IP addresses,azurerm_kubernetes_cluster,AKSNodePublicIpDisabled.py
+CKV_AZURE_232,Azure,Ensure that only critical system pods run on system nodes,,AKSOnlyCriticalPodsOnSystemNodes.py
+CKV_AZURE_169,Azure,Ensure Azure Kubernetes Cluster (AKS) nodes use scale sets,,AKSPoolTypeIsScaleSet.py
+CKV_AZURE_5,Azure,Ensure RBAC is enabled on AKS clusters,azurerm_kubernetes_cluster,AKSRbacEnabled.py
+CKV_AZURE_172,Azure,Ensure autorotation of Secrets Store CSI Driver secrets for AKS clusters,,AKSSecretStoreRotation.py
+CKV_AZURE_171,Azure,Ensure AKS cluster upgrade channel is chosen,,AKSUpgradeChannel.py
+CKV_AZURE_116,Azure,Ensure that AKS uses Azure Policies Add-on,azurerm_kubernetes_cluster,AKSUsesAzurePoliciesAddon.py
+CKV_AZURE_117,Azure,Ensure that AKS uses disk encryption set,azurerm_kubernetes_cluster,AKSUsesDiskEncryptionSet.py
+CKV_AZURE_215,Azure,Ensure API management backend uses https,,APIManagementBackendHTTPS.py
+CKV_AZURE_152,Azure,Ensure Client Certificates are enforced for API management,azurerm_api_management,APIManagementCertsEnforced.py
+CKV_AZURE_173,Azure,Ensure API management uses at least TLS 1.2,,APIManagementMinTLS12.py
+CKV_AZURE_174,Azure,Ensure API management public access is disabled,,APIManagementPublicAccess.py
+CKV_AZURE_107,Azure,Ensure that API management services use virtual networks,azurerm_api_management,APIServicesUseVirtualNetwork.py
+CKV_AZURE_186,Azure,Ensure App configuration encryption block is set.,,AppConfigEncryption.py
+CKV_AZURE_184,Azure,Ensure ,,AppConfigLocalAuth.py
+CKV_AZURE_185,Azure,Ensure ,,AppConfigPublicAccess.py
+CKV_AZURE_187,Azure,Ensure App configuration purge protection is enabled,,AppConfigPurgeProtection.py
+CKV_AZURE_188,Azure,Ensure App configuration Sku is standard,,AppConfigSku.py
+CKV_AZURE_135,Azure,Ensure Application Gateway WAF prevents message lookup in Log4j2. See CVE-2021-44228 aka log4jshell,,AppGatewayWAFACLCVE202144228.py
+CKV_AZURE_218,Azure,Ensure Application Gateway defines secure protocols for in transit communication,,AppGWDefinesSecureProtocols.py
+CKV_AZURE_217,Azure,Ensure Azure Application gateways listener that allow connection requests over HTTP,,AppGWUsesHttps.py
+CKV_AZURE_122,Azure,Ensure that Application Gateway uses WAF in \,azurerm_web_application_firewall_policy,AppGWUseWAFMode.py
+CKV_AZURE_214,Azure,Ensure App Service is set to be always on,,AppServiceAlwaysOn.py
+CKV_AZURE_13,Azure,Ensure App Service Authentication is set on Azure App Service,,AppServiceAuthentication.py
+CKV_AZURE_17,Azure,Ensure the web app has ,,AppServiceClientCertificate.py
+CKV_AZURE_65,Azure,Ensure that App service enables detailed error messages,,AppServiceDetailedErrorMessagesEnabled.py
+CKV_AZURE_57,Azure,Ensure that CORS disallows every resource to access app services,,AppServiceDisallowCORS.py
+CKV_AZURE_80,Azure,Ensure that ,"azurerm_app_service, azurerm_windows_web_app",AppServiceDotnetFrameworkVersion.py
+CKV_AZURE_66,Azure,Ensure that App service enables failed request tracing,,AppServiceEnableFailedRequest.py
+CKV_AZURE_231,Azure,Ensure App Service Environment is zone redundant,,AppServiceEnvironmentZoneRedundant.py
+CKV_AZURE_78,Azure,Ensure FTP deployments are disabled,,AppServiceFTPSState.py
+CKV_AZURE_63,Azure,Ensure that App service enables HTTP logging,,AppServiceHttpLoggingEnabled.py
+CKV_AZURE_18,Azure,Ensure that ,,AppServiceHttps20Enabled.py
+CKV_AZURE_14,Azure,Ensure web app redirects all HTTP traffic to HTTPS in Azure App Service,,AppServiceHTTPSOnly.py
+CKV_AZURE_16,Azure,Ensure that Register with Azure Active Directory is enabled on App Service,,AppServiceIdentity.py
+CKV_AZURE_71,Azure,Ensure that Managed identity provider is enabled for app services,,AppServiceIdentityProviderEnabled.py
+CKV_AZURE_212,Azure,Ensure App Service has a minimum number of instances for failover,,AppServiceInstanceMinimum.py
+CKV_AZURE_83,Azure,Ensure that ,azurerm_app_service,AppServiceJavaVersion.py
+CKV_AZURE_15,Azure,Ensure web app is using the latest version of TLS encryption,,AppServiceMinTLSVersion.py
+CKV_AZURE_81,Azure,Ensure that ,azurerm_app_service,AppServicePHPVersion.py
+CKV_AZURE_225,Azure,Ensure the App Service Plan is zone redundant,,AppServicePlanZoneRedundant.py
+CKV_AZURE_222,Azure,Ensure that Azure Web App public network access is disabled,,AppServicePublicAccessDisabled.py
+CKV_AZURE_82,Azure,Ensure that ,azurerm_app_service,AppServicePythonVersion.py
+CKV_AZURE_72,Azure,Ensure that remote debugging is not enabled for app services,,AppServiceRemoteDebuggingNotEnabled.py
+CKV_AZURE_213,Azure,Ensure that App Service configures health check,,AppServiceSetHealthCheck.py
+CKV_AZURE_211,Azure,Ensure App Service plan suitable for production use,azurerm_service_plan,AppServiceSkuMinimum.py
+CKV_AZURE_155,Azure,Ensure debugging is disabled for the App service slot,azurerm_app_service_slot,AppServiceSlotDebugDisabled.py
+CKV_AZURE_153,Azure,Ensure web app redirects all HTTP traffic to HTTPS in Azure App Service Slot,"azurerm_app_service_slot, azurerm_linux_web_app_slot, azurerm_windows_web_app_slot",AppServiceSlotHTTPSOnly.py
+CKV_AZURE_154,Azure,Ensure the App service slot is using the latest version of TLS encryption,azurerm_app_service_slot,AppServiceSlotMinTLS.py
+CKV_AZURE_88,Azure,Ensure that app services use Azure Files,,AppServiceUsedAzureFiles.py
+CKV_AZURE_73,Azure,Ensure that Automation account variables are encrypted,,AutomationEncrypted.py
+CKV_AZURE_248,Azure,Ensure that if Azure Batch account public network access in case ,,AzureBatchAccountEndpointAccessDefaultAction.py
+CKV_AZURE_76,Azure,Ensure that Azure Batch account uses key vault to encrypt data,azurerm_batch_account,AzureBatchAccountUsesKeyVaultEncryption.py
+CKV_AZURE_98,Azure,Ensure that Azure Container group is deployed into virtual network,azurerm_container_group,AzureContainerGroupDeployedIntoVirtualNetwork.py
+CKV_AZURE_235,Azure,Ensure that Azure container environment variables are configured with secure values only,,AzureContainerInstanceEnvVarSecureValueType.py
+CKV_AZURE_245,Azure,Ensure that Azure Container group is deployed into virtual network,,AzureContainerInstancePublicIPAddressType.py
+CKV_AZURE_75,Azure,Ensure that Azure Data Explorer uses double encryption,azurerm_kusto_cluster,AzureDataExplorerDoubleEncryptionEnabled.py
+CKV_AZURE_234,Azure,Ensure that Azure Defender for cloud is set to On for Resource Manager,,AzureDefenderDisabledForResManager.py
+CKV_AZURE_61,Azure,Ensure that Azure Defender is set to On for App Service,,AzureDefenderOnAppServices.py
+CKV_AZURE_86,Azure,Ensure that Azure Defender is set to On for Container Registries,,AzureDefenderOnContainerRegistry.py
+CKV_AZURE_87,Azure,Ensure that Azure Defender is set to On for Key Vault,,AzureDefenderOnKeyVaults.py
+CKV_AZURE_85,Azure,Ensure that Azure Defender is set to On for Kubernetes,,AzureDefenderOnKubernetes.py
+CKV_AZURE_55,Azure,Ensure that Azure Defender is set to On for Servers,,AzureDefenderOnServers.py
+CKV_AZURE_69,Azure,Ensure that Azure Defender is set to On for Azure SQL database servers,,AzureDefenderOnSqlServers.py
+CKV_AZURE_79,Azure,Ensure that Azure Defender is set to On for SQL servers on machines,,AzureDefenderOnSqlServerVMS.py
+CKV_AZURE_84,Azure,Ensure that Azure Defender is set to On for Storage,,AzureDefenderOnStorage.py
+CKV_AZURE_219,Azure,Ensure Firewall defines a firewall policy,azurerm_firewall,AzureFirewallDefinesPolicy.py
+CKV_AZURE_216,Azure,Ensure DenyIntelMode is set to Deny for Azure Firewalls,,AzureFirewallDenyThreatIntelMode.py
+CKV_AZURE_220,Azure,Ensure Firewall policy has IDPS mode as deny,azurerm_firewall_policy,AzureFirewallPolicyIDPSDeny.py
+CKV_AZURE_121,Azure,Ensure that Azure Front Door enables WAF,azurerm_frontdoor,AzureFrontDoorEnablesWAF.py
+CKV_AZURE_50,Azure,Ensure Virtual Machine Extensions are not Installed,"azurerm_linux_virtual_machine, azurerm_windows_virtual_machine",AzureInstanceExtensions.py
+CKV_AZURE_1,Azure,Ensure Azure Instance does not use basic authentication(Use SSH Key Instead),"azurerm_virtual_machine, azurerm_linux_virtual_machine",AzureInstancePassword.py
+CKV_AZURE_2,Azure,Ensure Azure managed disk has encryption enabled,azurerm_managed_disk,AzureManagedDiskEncryption.py
+CKV_AZURE_93,Azure,Ensure that managed disks use a specific set of disk encryption sets for the ,azurerm_managed_disk,AzureManagedDiskEncryptionSet.py
+CKV_AZURE_49,Azure,Ensure Azure linux scale set does not use basic authentication(Use SSH Key Instead),azurerm_linux_virtual_machine_scale_set,AzureScaleSetPassword.py
+CKV_AZURE_210,Azure,Ensure Azure Cognitive Search service allowed IPS does not give public Access,,AzureSearchAllowedIPsNotGlobal.py
+CKV_AZURE_207,Azure,Ensure Azure Cognitive Search service uses managed identities to access Azure resources,,AzureSearchManagedIdentity.py
+CKV_AZURE_124,Azure,Ensure that Azure Cognitive Search disables public network access,azurerm_search_service,AzureSearchPublicNetworkAccessDisabled.py
+CKV_AZURE_208,Azure,Ensure that Azure Cognitive Search maintains SLA for index updates,,AzureSearchSLAIndex.py
+CKV_AZURE_209,Azure,Ensure that Azure Cognitive Search maintains SLA for search index queries,,AzureSearchSLAQueryUpdates.py
+CKV_AZURE_199,Azure,Ensure that Azure Service Bus uses double encryption,,AzureServicebusDoubleEncryptionEnabled.py
+CKV_AZURE_201,Azure,Ensure that Azure Service Bus uses a customer-managed key to encrypt data,,AzureServicebusHasCMK.py
+CKV_AZURE_202,Azure,Ensure that Managed identity provider is enabled for Azure Service Bus,,AzureServicebusIdentityProviderEnabled.py
+CKV_AZURE_205,Azure,Ensure Azure Service Bus is using the latest version of TLS encryption,,AzureServicebusMinTLSVersion.py
+CKV_AZURE_204,Azure,Ensure ,,AzureServicebusPublicAccessDisabled.py
+CKV_AZURE_125,Azure,Ensures that Service Fabric use three levels of protection available,azurerm_service_fabric_cluster,AzureServiceFabricClusterProtectionLevel.py
+CKV_AZURE_242,Azure,Ensure isolated compute is enabled for Synapse Spark pools,,AzureSparkPoolIsolatedComputeEnabled.py
+CKV_AZURE_238,Azure,Ensure that all Azure Cognitive Services accounts are configured with a managed identity,azurerm_cognitive_account,CognitiveServicesConfigureIdentity.py
+CKV_AZURE_134,Azure,Ensure that Cognitive Services accounts disable public network access,azurerm_cognitive_account,CognitiveServicesDisablesPublicNetwork.py
+CKV_AZURE_236,Azure,Ensure that Cognitive Services accounts disable local authentication,,CognitiveServicesEnableLocalAuth.py
+CKV_AZURE_99,Azure,Ensure Cosmos DB accounts have restricted access,azurerm_cosmosdb_account,CosmosDBAccountsRestrictedAccess.py
+CKV_AZURE_132,Azure,Ensure cosmosdb does not allow privileged escalation by restricting management plane changes,,CosmosDBDisableAccessKeyWrite.py
+CKV_AZURE_101,Azure,Ensure that Azure Cosmos DB disables public network access,azurerm_cosmosdb_account,CosmosDBDisablesPublicNetwork.py
+CKV_AZURE_100,Azure,Ensure that Cosmos DB accounts have customer-managed keys to encrypt data at rest,azurerm_cosmosdb_account,CosmosDBHaveCMK.py
+CKV_AZURE_39,Azure,Ensure that no custom subscription owner roles are created,azurerm_role_definition,CutsomRoleDefinitionSubscriptionOwner.py
+CKV_AZURE_158,Azure,Ensure Databricks Workspace data plane to control plane communication happens over private link,azurerm_databricks_workspace,DatabricksWorkspaceIsNotPublic.py
+CKV_AZURE_181,Azure,Ensure that data explorer/Kusto uses managed identities to access Azure resources securely.,,DataExplorerServiceIdentity.py
+CKV_AZURE_180,Azure,Ensure that data explorer uses Sku with an SLA,,DataExplorerSKUHasSLA.py
+CKV_AZURE_74,Azure,Ensure that Azure Data Explorer (Kusto) uses disk encryption,azurerm_kusto_cluster,DataExplorerUsesDiskEncryption.py
+CKV_AZURE_104,Azure,Ensure that Azure Data factory public network access is disabled,,DataFactoryNoPublicNetworkAccess.py
+CKV_AZURE_103,Azure,Ensure that Azure Data Factory uses Git repository for source control,azurerm_data_factory,DataFactoryUsesGitRepository.py
+CKV_AZURE_105,Azure,Ensure that Data Lake Store accounts enables encryption,,DataLakeStoreEncryption.py
+CKV_AZURE_194,Azure,Ensure that Managed identity provider is enabled for Azure Event Grid Domain,,EventgridDomainIdentityProviderEnabled.py
+CKV_AZURE_195,Azure,Ensure that Azure Event Grid Domain local Authentication is disabled,,EventgridDomainLocalAuthentication.py
+CKV_AZURE_106,Azure,Ensure that Azure Event Grid Domain public network access is disabled,azurerm_eventgrid_domain,EventgridDomainNetworkAccess.py
+CKV_AZURE_191,Azure,Ensure that Managed identity provider is enabled for Azure Event Grid Topic,,EventgridTopicIdentityProviderEnabled.py
+CKV_AZURE_192,Azure,Ensure that Azure Event Grid Topic local Authentication is disabled,,EventgridTopicLocalAuthentication.py
+CKV_AZURE_193,Azure,Ensure public network access is disabled for Azure Event Grid Topic,,EventgridTopicNetworkAccess.py
+CKV_AZURE_223,Azure,Ensure Event Hub Namespace uses at least TLS 1.2,,EventHubNamespaceMinTLS12.py
+CKV_AZURE_228,Azure,Ensure the Azure Event Hub Namespace is zone redundant,,EventHubNamespaceZoneRedundant.py
+CKV_AZURE_123,Azure,Ensure that Azure Front Door uses WAF in \,azurerm_frontdoor_firewall_policy,FrontdoorUseWAFMode.py
+CKV_AZURE_133,Azure,Ensure Front Door WAF prevents message lookup in Log4j2. See CVE-2021-44228 aka log4jshell,azurerm_frontdoor_firewall_policy,FrontDoorWAFACLCVE202144228.py
+CKV_AZURE_62,Azure,Ensure function apps are not accessible from all regions,azurerm_function_app,FunctionAppDisallowCORS.py
+CKV_AZURE_159,Azure,Ensure function app builtin logging is enabled,"azurerm_function_app, azurerm_function_app_slot",FunctionAppEnableLogging.py
+CKV_AZURE_67,Azure,Ensure that ,"azurerm_function_app, azurerm_function_app_slot",FunctionAppHttpVersionLatest.py
+CKV_AZURE_145,Azure,Ensure Function app is using the latest version of TLS encryption,"azurerm_function_app, azurerm_linux_function_app, azurerm_windows_function_app, azurerm_function_app_slot, azurerm_linux_function_app_slot, azurerm_windows_function_app_slot",FunctionAppMinTLSVersion.py
+CKV_AZURE_221,Azure,Ensure that Azure Function App public network access is disabled,,FunctionAppPublicAccessDisabled.py
+CKV_AZURE_70,Azure,Ensure that Function apps is only accessible over HTTPS,"azurerm_function_app, azurerm_linux_function_app, azurerm_windows_function_app, azurerm_function_app_slot, azurerm_linux_function_app_slot, azurerm_windows_function_app_slot",FunctionAppsAccessibleOverHttps.py
+CKV_AZURE_56,Azure,Ensure that function apps enables Authentication,azurerm_function_app,FunctionAppsEnableAuthentication.py
+CKV_AZURE_249,Azure,Ensure Azure GitHub Actions OIDC trust policy is configured securely,"azuread_application_federated_identity_credential, ",GithubActionsOIDCTrustPolicy.py
+CKV_AZURE_108,Azure,Ensure that Azure IoT Hub disables public network access,azurerm_iothub,IoTNoPublicNetworkAccess.py
+CKV_AZURE_112,Azure,Ensure that key vault key is backed by HSM,azurerm_key_vault_key,KeyBackedByHSM.py
+CKV_AZURE_40,Azure,Ensure that the expiration date is set on all keys,azurerm_key_vault_key,KeyExpirationDate.py
+CKV_AZURE_189,Azure,Ensure that Azure Key Vault disables public network access,,KeyVaultDisablesPublicNetworkAccess.py
+CKV_AZURE_109,Azure,Ensure that key vault allows firewall rules settings,azurerm_key_vault,KeyVaultEnablesFirewallRulesSettings.py
+CKV_AZURE_110,Azure,Ensure that key vault enables purge protection,azurerm_key_vault,KeyVaultEnablesPurgeProtection.py
+CKV_AZURE_111,Azure,Ensure that key vault enables soft delete,azurerm_key_vault,KeyVaultEnablesSoftDelete.py
+CKV_AZURE_42,Azure,Ensure the key vault is recoverable,azurerm_key_vault,KeyvaultRecoveryEnabled.py
+CKV_AZURE_246,Azure,Ensure Azure AKS cluster HTTP application routing is disabled,,KubernetesClusterHTTPApplicationRouting.py
+CKV_AZURE_178,Azure,Ensure linux VM enables SSH with keys for secure communication,,LinuxVMUsesSSH.py
+CKV_AZURE_129,Azure,Ensure that MariaDB server enables geo-redundant backups,,MariaDBGeoBackupEnabled.py
+CKV_AZURE_48,Azure,Ensure ,,MariaDBPublicAccessDisabled.py
+CKV_AZURE_47,Azure,Ensure ,azurerm_mariadb_server,MariaDBSSLEnforcementEnabled.py
+CKV_AZURE_150,Azure,Ensure Machine Learning Compute Cluster Minimum Nodes Set To 0,azurerm_machine_learning_compute_cluster,MLComputeClusterMinNodes.py
+CKV_AZURE_38,Azure,Ensure audit profile captures all the activities,azurerm_monitor_log_profile,MonitorLogProfileCategories.py
+CKV_AZURE_37,Azure,Ensure that Activity Log Retention is set 365 days or greater,azurerm_monitor_log_profile,MonitorLogProfileRetentionDays.py
+CKV_AZURE_156,Azure,Ensure default Auditing policy for a SQL Server is configured to capture and retain the activity logs,azurerm_mssql_database_extended_auditing_policy,MSSQLServerAuditPolicyLogMonitor.py
+CKV_AZURE_52,Azure,Ensure MSSQL is using the latest version of TLS encryption,azurerm_mssql_server,MSSQLServerMinTLSVersion.py
+CKV_AZURE_96,Azure,Ensure that MySQL server enables infrastructure encryption,azurerm_mysql_server,MySQLEncryptionEnabled.py
+CKV_AZURE_94,Azure,Ensure that My SQL server enables geo-redundant backups,,MySQLGeoBackupEnabled.py
+CKV_AZURE_53,Azure,Ensure ,,MySQLPublicAccessDisabled.py
+CKV_AZURE_54,Azure,Ensure MySQL is using the latest version of TLS encryption,,MySQLServerMinTLSVersion.py
+CKV_AZURE_28,Azure,Ensure ,azurerm_mysql_server,MySQLServerSSLEnforcementEnabled.py
+CKV_AZURE_127,Azure,Ensure that My SQL server enables Threat detection policy,azurerm_mysql_server,MySQLTreatDetectionEnabled.py
+CKV_AZURE_118,Azure,Ensure that Network Interfaces disable IP forwarding,azurerm_network_interface,NetworkInterfaceEnableIPForwarding.py
+CKV_AZURE_12,Azure,Ensure that Network Security Group Flow Log retention period is ,azurerm_network_watcher_flow_log,NetworkWatcherFlowLogPeriod.py
+CKV_AZURE_160,Azure,Ensure that HTTP (port 80) access is restricted from the internet,,NSGRuleHTTPAccessRestricted.py
+CKV_AZURE_9,Azure,Ensure that RDP access is restricted from the internet,,NSGRuleRDPAccessRestricted.py
+CKV_AZURE_10,Azure,Ensure that SSH access is restricted from the internet,,NSGRuleSSHAccessRestricted.py
+CKV_AZURE_77,Azure,Ensure that UDP Services are restricted from the Internet ,"azurerm_network_security_group, azurerm_network_security_rule",NSGRuleUDPAccessRestricted.py
+CKV_AZURE_247,Azure,Ensure that Azure Cognitive Services account hosted with OpenAI is configured with data loss prevention,,OpenAICognitiveServicesRestrictOutboundNetwork.py
+CKV_AZURE_130,Azure,Ensure that PostgreSQL server enables infrastructure encryption,,PostgreSQLEncryptionEnabled.py
+CKV_AZURE_136,Azure,Ensure that PostgreSQL Flexible server enables geo-redundant backups,azurerm_postgresql_flexible_server,PostgreSQLFlexiServerGeoBackupEnabled.py
+CKV_AZURE_147,Azure,Ensure PostgreSQL is using the latest version of TLS encryption,azurerm_postgresql_server,PostgreSQLMinTLSVersion.py
+CKV_AZURE_32,Azure,Ensure server parameter ,azurerm_postgresql_configuration,PostgreSQLServerConnectionThrottlingEnabled.py
+CKV_AZURE_30,Azure,Ensure server parameter ,azurerm_postgresql_configuration,PostgreSQLServerLogCheckpointsEnabled.py
+CKV_AZURE_31,Azure,Ensure server parameter ,azurerm_postgresql_configuration,PostgreSQLServerLogConnectionsEnabled.py
+CKV_AZURE_146,Azure,Ensure server parameter ,azurerm_postgresql_configuration,PostgreSQLServerLogRetentionEnabled.py
+CKV_AZURE_68,Azure,Ensure that PostgreSQL server disables public network access,azurerm_postgresql_server,PostgreSQLServerPublicAccessDisabled.py
+CKV_AZURE_29,Azure,Ensure ,azurerm_postgresql_server,PostgreSQLServerSSLEnforcementEnabled.py
+CKV_AZURE_128,Azure,Ensure that PostgreSQL server enables Threat detection policy,azurerm_postgresql_server,PostgresSQLTreatDetectionEnabled.py
+CKV_AZURE_102,Azure,Ensure that PostgreSQL server enables geo-redundant backups,azurerm_postgresql_server,PostgressSQLGeoBackupEnabled.py
+CKV_AZURE_175,Azure,Ensure Web PubSub uses a SKU with an SLA,,PubsubSKUSLA.py
+CKV_AZURE_176,Azure,Ensure Web PubSub uses managed identities to access Azure resources,,PubsubSpecifyIdentity.py
+CKV_AZURE_91,Azure,Ensure that only SSL are enabled for Cache for Redis,azurerm_redis_cache,RedisCacheEnableNonSSLPort.py
+CKV_AZURE_148,Azure,Ensure Redis Cache is using the latest version of TLS encryption,azurerm_redis_cache,RedisCacheMinTLSVersion.py
+CKV_AZURE_89,Azure,Ensure that Azure Cache for Redis disables public network access,,RedisCachePublicNetworkAccessEnabled.py
+CKV_AZURE_230,Azure,Standard Replication should be enabled,,RedisCacheStandardReplicationEnabled.py
+CKV_AZURE_114,Azure,Ensure that key vault secrets have \,azurerm_key_vault_secret,SecretContentType.py
+CKV_AZURE_41,Azure,Ensure that the expiration date is set on all secrets,azurerm_key_vault_secret,SecretExpirationDate.py
+CKV_AZURE_21,Azure,Ensure that ,azurerm_security_center_contact,SecurityCenterContactEmailAlert.py
+CKV_AZURE_22,Azure,Ensure that ,azurerm_security_center_contact,SecurityCenterContactEmailAlertAdmins.py
+CKV_AZURE_131,Azure,Ensure that ,azurerm_security_center_contact,SecurityCenterContactEmails.py
+CKV_AZURE_20,Azure,Ensure that security contact ,azurerm_security_center_contact,SecurityCenterContactPhone.py
+CKV_AZURE_19,Azure,Ensure that standard pricing tier is selected,azurerm_security_center_subscription_pricing,SecurityCenterStandardPricing.py
+CKV_AZURE_196,Azure,Ensure that SignalR uses a Paid Sku for its SLA,,SignalRSKUSLA.py
+CKV_AZURE_161,Azure,Ensures Spring Cloud API Portal is enabled on for HTTPS,,SpringCloudAPIPortalHTTPSOnly.py
+CKV_AZURE_162,Azure,Ensures Spring Cloud API Portal Public Access Is Disabled,azurerm_spring_cloud_api_portal,SpringCloudAPIPortalPublicAccessIsDisabled.py
+CKV_AZURE_224,Azure,Ensure that the Ledger feature is enabled on database that ,,SQLDatabaseLedgerEnabled.py
+CKV_AZURE_229,Azure,Ensure the Azure SQL Database Namespace is zone redundant,,SQLDatabaseZoneRedundant.py
+CKV_AZURE_26,Azure,Ensure that ,azurerm_mssql_server_security_alert_policy,SQLServerEmailAlertsEnabled.py
+CKV_AZURE_27,Azure,Ensure that ,azurerm_mssql_server_security_alert_policy,SQLServerEmailAlertsToAdminsEnabled.py
+CKV_AZURE_11,Azure,Ensure no SQL Databases allow ingress from 0.0.0.0/0 (ANY IP),,SQLServerNoPublicAccess.py
+CKV_AZURE_113,Azure,Ensure that SQL server disables public network access,azurerm_mssql_server,SQLServerPublicAccessDisabled.py
+CKV_AZURE_25,Azure,Ensure that ,azurerm_mssql_server_security_alert_policy,SQLServerThreatDetectionTypes.py
+CKV_AZURE_36,Azure,Ensure ,"azurerm_storage_account, azurerm_storage_account_network_rules",StorageAccountAzureServicesAccessEnabled.py
+CKV_AZURE_35,Azure,Ensure default network access rule for Storage Accounts is set to deny,"azurerm_storage_account, azurerm_storage_account_network_rules",StorageAccountDefaultNetworkAccessDeny.py
+CKV_AZURE_59,Azure,Ensure that Storage accounts disallow public access,,StorageAccountDisablePublicAccess.py
+CKV_AZURE_33,Azure,"Ensure Storage logging is enabled for Queue service for read, write and delete requests",azurerm_storage_account,StorageAccountLoggingQueueServiceEnabled.py
+CKV_AZURE_44,Azure,Ensure Storage Account is using the latest version of TLS encryption,azurerm_storage_account,StorageAccountMinimumTlsVersion.py
+CKV_AZURE_43,Azure,Ensure Storage Accounts adhere to the naming rules,azurerm_storage_account,StorageAccountName.py
+CKV_AZURE_3,Azure,Ensure that ,,StorageAccountsTransportEncryption.py
+CKV_AZURE_206,Azure,Ensure that Storage Accounts use replication,,StorageAccountsUseReplication.py
+CKV_AZURE_190,Azure,Ensure that Storage blobs restrict public access,,StorageBlobRestrictPublicAccess.py
+CKV_AZURE_34,Azure,Ensure that ,azurerm_storage_container,StorageBlobServiceContainerPrivateAccess.py
+CKV_AZURE_244,Azure,Avoid the use of local users for Azure Storage unless necessary,,StorageLocalUsers.py
+CKV_AZURE_64,Azure,Ensure that Azure File Sync disables public network access,azurerm_storage_sync,StorageSyncPublicAccessDisabled.py
+CKV_AZURE_250,Azure,Ensure Storage Sync Service is not configured with overly permissive network access,azurerm_storage_sync,StorageSyncServicePermissiveAccess.py
+CKV_AZURE_241,Azure,Ensure Synapse SQL pools are encrypted,azurerm_synapse_sql_pool,SynapseSQLPoolDataEncryption.py
+CKV_AZURE_239,Azure,Ensure Azure Synapse Workspace administrator login password is not exposed,azurerm_synapse_workspace,SynapseWorkspaceAdministratorLoginPasswordHidden.py
+CKV_AZURE_240,Azure,Ensure Azure Synapse Workspace is encrypted with a CMK,azurerm_synapse_workspace,SynapseWorkspaceCMKEncryption.py
+CKV_AZURE_157,Azure,Ensure that Synapse workspace has data_exfiltration_protection_enabled,azurerm_synapse_workspace,SynapseWorkspaceEnablesDataExfilProtection.py
+CKV_AZURE_58,Azure,Ensure that Azure Synapse workspaces enables managed virtual networks,azurerm_synapse_workspace,SynapseWorkspaceEnablesManagedVirtualNetworks.py
+CKV_AZURE_179,Azure,Ensure VM agent is installed,,VMAgentIsInstalled.py
+CKV_AZURE_45,Azure,Ensure that no sensitive credentials are exposed in VM custom_data,,VMCredsInCustomData.py
+CKV_AZURE_149,Azure,Ensure that Virtual machine does not enable password authentication,"azurerm_linux_virtual_machine_scale_set, azurerm_linux_virtual_machine",VMDisablePasswordAuthentication.py
+CKV_AZURE_251,Azure,Ensure Azure Virtual Machine disks are configured without public network access,azurerm_managed_disk,VMDiskWithPublicAccess.py
+CKV_AZURE_97,Azure,Ensure that Virtual machine scale sets have encryption at host enabled,"azurerm_linux_virtual_machine_scale_set, azurerm_windows_virtual_machine_scale_set",VMEncryptionAtHostEnabled.py
+CKV_AZURE_95,Azure,Ensure that automatic OS image patching is enabled for Virtual Machine Scale Sets,azurerm_virtual_machine_scale_set,VMScaleSetsAutoOSImagePatchingEnabled.py
+CKV_AZURE_92,Azure,Ensure that Virtual Machines use managed disks,"azurerm_linux_virtual_machine, azurerm_windows_virtual_machine",VMStorageOsDisk.py
+CKV_AZURE_183,Azure,Ensure that VNET uses local DNS addresses,,VnetLocalDNS.py
+CKV_AZURE_182,Azure,Ensure that VNET has at least 2 connected DNS Endpoints,,VnetSingleDNSServer.py
+CKV_AZURE_177,Azure,Ensure Windows VM enables automatic updates,,WinVMAutomaticUpdates.py
+CKV_AZURE_151,Azure,Ensure Windows VM enables encryption,azurerm_windows_virtual_machine,WinVMEncryptionAtHost.py
+CKV_DIO_2,DigitalOcean,Ensure the droplet specifies an SSH key,digitalocean_droplet,DropletSSHKeys.py
+CKV_DIO_4,DigitalOcean,Ensure the firewall ingress is not wide open,digitalocean_firewall,FirewallIngressOpen.py
+CKV_DIO_3,DigitalOcean,Ensure the Spaces bucket is private,digitalocean_spaces_bucket,SpacesBucketPublicRead.py
+CKV_DIO_1,DigitalOcean,Ensure the Spaces bucket has versioning enabled,digitalocean_spaces_bucket,SpacesBucketVersioning.py
+CKV_GCP_101,GCP,Ensure that Artifact Registry repositories are not anonymously or publicly accessible,,ArtifactRegistryPrivateRepo.py
+CKV_GCP_84,GCP,Ensure Artifact Registry Repositories are encrypted with Customer Supplied Encryption Keys (CSEK),google_artifact_registry_repository,ArtifactRegsitryEncryptedWithCMK.py
+CKV_GCP_81,GCP,Ensure Big Query Datasets are encrypted with Customer Supplied Encryption Keys (CSEK),google_bigquery_dataset,BigQueryDatasetEncryptedWithCMK.py
+CKV_GCP_100,GCP,Ensure that BigQuery Tables are not anonymously or publicly accessible,,BigQueryPrivateTable.py
+CKV_GCP_121,GCP,Ensure BigQuery tables have deletion protection enabled,google_bigquery_table,BigQueryTableDeletionProtection.py
+CKV_GCP_80,GCP,Ensure Big Query Tables are encrypted with Customer Supplied Encryption Keys (CSEK),google_bigquery_table,BigQueryTableEncryptedWithCMK.py
+CKV_GCP_122,GCP,Ensure Big Table Instances have deletion protection enabled,google_bigtable_instance,BigTableInstanceDeletionProtection.py
+CKV_GCP_85,GCP,Ensure Big Table Instances are encrypted with Customer Supplied Encryption Keys (CSEK),google_bigtable_instance,BigTableInstanceEncryptedWithCMK.py
+CKV_GCP_73,GCP,Ensure Cloud Armor prevents message lookup in Log4j2. See CVE-2021-44228 aka log4jshell,,CloudArmorWAFACLCVE202144228.py
+CKV_GCP_86,GCP,Ensure Cloud build workers are private,google_cloudbuild_worker_pool,CloudBuildWorkersArePrivate.py
+CKV_GCP_124,GCP,Ensure GCP Cloud Function is not configured with overly permissive Ingress setting,,CloudFunctionPermissiveIngress.py
+CKV_GCP_107,GCP,Cloud functions should not be public,"google_cloudfunctions_function_iam_member, google_cloudfunctions_function_iam_binding, google_cloudfunctions2_function_iam_member, google_cloudfunctions2_function_iam_binding",CloudFunctionsShouldNotBePublic.py
+CKV_GCP_83,GCP,Ensure PubSub Topics are encrypted with Customer Supplied Encryption Keys (CSEK),google_pubsub_topic,CloudPubSubEncryptedWithCMK.py
+CKV_GCP_79,GCP,Ensure SQL database is using latest Major version,google_sql_database_instance,CloudSqlMajorVersion.py
+CKV_GCP_62,GCP,Bucket should log access,google_storage_bucket,CloudStorageLogging.py
+CKV_GCP_63,GCP,Bucket should not log to itself,google_storage_bucket,CloudStorageSelfLogging.py
+CKV_GCP_78,GCP,Ensure Cloud storage has versioning enabled,google_storage_bucket,CloudStorageVersioningEnabled.py
+CKV_GCP_90,GCP,Ensure data flow jobs are encrypted with Customer Supplied Encryption Keys (CSEK),google_dataflow_job,DataflowJobEncryptedWithCMK.py
+CKV_GCP_94,GCP,Ensure Dataflow jobs are private,,DataflowPrivateJob.py
+CKV_GCP_87,GCP,Ensure Data fusion instances are private,google_data_fusion_instance,DataFusionPrivateInstance.py
+CKV_GCP_104,GCP,Ensure Datafusion has stack driver logging enabled,google_data_fusion_instance,DataFusionStackdriverLogs.py
+CKV_GCP_105,GCP,Ensure Datafusion has stack driver monitoring enabled,google_data_fusion_instance,DataFusionStackdriverMonitoring.py
+CKV_GCP_91,GCP,Ensure Dataproc cluster is encrypted with Customer Supplied Encryption Keys (CSEK),google_dataproc_cluster,DataprocClusterEncryptedWithCMK.py
+CKV_GCP_98,GCP,Ensure that Dataproc clusters are not anonymously or publicly accessible,,DataprocPrivateCluster.py
+CKV_GCP_103,GCP,Ensure Dataproc Clusters do not have public IPs,,DataprocPublicIpCluster.py
+CKV_GCP_102,GCP,Ensure that GCP Cloud Run services are not anonymously or publicly accessible,,GCPCloudRunPrivateService.py
+CKV_GCP_125,GCP,Ensure GCP GitHub Actions OIDC trust policy is configured securely,google_iam_workload_identity_pool_provider,GithubActionsOIDCTrustPolicy.py
+CKV_GCP_23,GCP,Ensure Kubernetes Cluster is created with Alias IP ranges enabled,google_container_cluster,GKEAliasIpEnabled.py
+CKV_GCP_66,GCP,Ensure use of Binary Authorization,google_container_cluster,GKEBinaryAuthorization.py
+CKV_GCP_13,GCP,Ensure client certificate authentication to Kubernetes Engine Clusters is disabled,google_container_cluster,GKEClientCertificateDisabled.py
+CKV_GCP_1,GCP,Ensure Stackdriver Logging is set to Enabled on Kubernetes Engine Clusters,,GKEClusterLogging.py
+CKV_GCP_7,GCP,Ensure Legacy Authorization is set to Disabled on Kubernetes Engine Clusters,google_container_cluster,GKEDisableLegacyAuth.py
+CKV_GCP_123,GCP,GKE Don,"google_container_cluster, ",GKEDontUseNodePools.py
+CKV_GCP_71,GCP,Ensure Shielded GKE Nodes are Enabled,,GKEEnableShieldedNodes.py
+CKV_GCP_61,GCP,Enable VPC Flow Logs and Intranode Visibility,,GKEEnableVPCFlowLogs.py
+CKV_GCP_72,GCP,Ensure Integrity Monitoring for Shielded GKE Nodes is Enabled,"google_container_cluster, google_container_node_pool",GKEEnsureIntegrityMonitoring.py
+CKV_GCP_21,GCP,Ensure Kubernetes Clusters are configured with Labels,google_container_cluster,GKEHasLabels.py
+CKV_GCP_65,GCP,Manage Kubernetes RBAC users with Google Groups for GKE,google_container_cluster,GKEKubernetesRBACGoogleGroups.py
+CKV_GCP_20,GCP,Ensure master authorized networks is set to enabled in GKE clusters,google_container_cluster,GKEMasterAuthorizedNetworksEnabled.py
+CKV_GCP_69,GCP,Ensure the GKE Metadata Server is Enabled,"google_container_cluster, google_container_node_pool",GKEMetadataServerIsEnabled.py
+CKV_GCP_8,GCP,Ensure Stackdriver Monitoring is set to Enabled on Kubernetes Engine Clusters,google_container_cluster,GKEMonitoringEnabled.py
+CKV_GCP_12,GCP,Ensure Network Policy is enabled on Kubernetes Engine Clusters,google_container_cluster,GKENetworkPolicyEnabled.py
+CKV_GCP_9,GCP,Ensure ,google_container_node_pool,GKENodePoolAutoRepairEnabled.py
+CKV_GCP_10,GCP,Ensure ,google_container_node_pool,GKENodePoolAutoUpgradeEnabled.py
+CKV_GCP_24,GCP,Ensure PodSecurityPolicy controller is enabled on the Kubernetes Engine Clusters,google_container_cluster,GKEPodSecurityPolicyEnabled.py
+CKV_GCP_25,GCP,Ensure Kubernetes Cluster is created with Private cluster enabled,,GKEPrivateClusterConfig.py
+CKV_GCP_64,GCP,Ensure clusters are created with Private Nodes,google_container_cluster,GKEPrivateNodes.py
+CKV_GCP_18,GCP,Ensure GKE Control Plane is not public,google_container_cluster,GKEPublicControlPlane.py
+CKV_GCP_70,GCP,Ensure the GKE Release Channel is set,google_container_cluster,GKEReleaseChannel.py
+CKV_GCP_68,GCP,Ensure Secure Boot for Shielded GKE Nodes is Enabled,"google_container_cluster, google_container_node_pool",GKESecureBootforShieldedNodes.py
+CKV_GCP_22,GCP,Ensure Container-Optimized OS (cos) is used for Kubernetes Engine Clusters Node image,google_container_node_pool,GKEUseCosImage.py
+CKV_GCP_15,GCP,Ensure that BigQuery datasets are not anonymously or publicly accessible,,GoogleBigQueryDatasetPublicACL.py
+CKV_GCP_17,GCP,Ensure that RSASHA1 is not used for the zone-signing and key-signing keys in Cloud DNS DNSSEC,google_dns_managed_zone,GoogleCloudDNSKeySpecsRSASHA1.py
+CKV_GCP_16,GCP,Ensure that DNSSEC is enabled for Cloud DNS,google_dns_managed_zone,GoogleCloudDNSSECEnabled.py
+CKV_GCP_50,GCP,Ensure MySQL database ,google_sql_database_instance,GoogleCloudMySqlLocalInfileOff.py
+CKV_GCP_110,GCP,Ensure pgAudit is enabled for your GCP PostgreSQL database,google_sql_database_instance,GoogleCloudPostgreSqlEnablePgaudit.py
+CKV_GCP_51,GCP,Ensure PostgreSQL database ,,GoogleCloudPostgreSqlLogCheckpoints.py
+CKV_GCP_52,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogConnection.py
+CKV_GCP_53,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogDisconnection.py
+CKV_GCP_108,GCP,Ensure hostnames are logged for GCP PostgreSQL databases,google_sql_database_instance,GoogleCloudPostgreSqlLogHostname.py
+CKV_GCP_54,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogLockWaits.py
+CKV_GCP_57,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogMinDuration.py
+CKV_GCP_109,GCP,Ensure the GCP PostgreSQL database log levels are set to ERROR or lower,google_sql_database_instance,GoogleCloudPostgreSqlLogMinErrorStatement.py
+CKV_GCP_55,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogMinMessage.py
+CKV_GCP_111,GCP,Ensure GCP PostgreSQL logs SQL statements,google_sql_database_instance,GoogleCloudPostgreSqlLogStatement.py
+CKV_GCP_56,GCP,Ensure PostgreSQL database ,google_sql_database_instance,GoogleCloudPostgreSqlLogTemp.py
+CKV_GCP_14,GCP,Ensure all Cloud SQL database instance have backup configuration enabled,,GoogleCloudSqlBackupConfiguration.py
+CKV_GCP_11,GCP,Ensure that Cloud SQL database Instances are not open to the world,google_sql_database_instance,GoogleCloudSqlDatabasePubliclyAccessible.py
+CKV_GCP_6,GCP,Ensure all Cloud SQL database instance requires all incoming connections to use SSL,google_sql_database_instance,GoogleCloudSqlDatabaseRequireSsl.py
+CKV_GCP_59,GCP,Ensure SQL database ,google_sql_database_instance,GoogleCloudSqlServerContainedDBAuthentication.py
+CKV_GCP_58,GCP,Ensure SQL database ,google_sql_database_instance,GoogleCloudSqlServerCrossDBOwnershipChaining.py
+CKV_GCP_60,GCP,Ensure Cloud SQL database does not have public IP,google_sql_database_instance,GoogleCloudSqlServerNoPublicIP.py
+CKV_GCP_32,GCP,Ensure ,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeBlockProjectSSH.py
+CKV_GCP_38,GCP,Ensure VM disks for critical VMs are encrypted with Customer Supplied Encryption Keys (CSEK),google_compute_instance,GoogleComputeBootDiskEncryption.py
+CKV_GCP_30,GCP,Ensure that instances are not configured to use the default service account,"google_compute_instance, google_compute_instance_from_template, google_compute_instance_template",GoogleComputeDefaultServiceAccount.py
+CKV_GCP_31,GCP,Ensure that instances are not configured to use the default service account with full access,"google_compute_instance, google_compute_instance_from_template, google_compute_instance_template",GoogleComputeDefaultServiceAccountFullAccess.py
+CKV_GCP_37,GCP,Ensure VM disks for critical VMs are encrypted with Customer Supplied Encryption Keys (CSEK),google_compute_disk,GoogleComputeDiskEncryption.py
+CKV_GCP_40,GCP,Ensure that Compute instances do not have public IP addresses,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeExternalIP.py
+CKV_GCP_77,GCP,Ensure Google compute firewall ingress does not allow on ftp port,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress20.py
+CKV_GCP_75,GCP,Ensure Google compute firewall ingress does not allow unrestricted FTP access,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress21.py
+CKV_GCP_2,GCP,Ensure Google compute firewall ingress does not allow unrestricted ssh access,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress22.py
+CKV_GCP_88,GCP,Ensure Google compute firewall ingress does not allow unrestricted mysql access,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress3306.py
+CKV_GCP_3,GCP,Ensure Google compute firewall ingress does not allow unrestricted rdp access,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress3389.py
+CKV_GCP_106,GCP,Ensure Google compute firewall ingress does not allow unrestricted http port 80 access,google_compute_firewall,GoogleComputeFirewallUnrestrictedIngress80.py
+CKV_GCP_34,GCP,Ensure that no instance in the project overrides the project setting for enabling OSLogin,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeInstanceOSLogin.py
+CKV_GCP_36,GCP,Ensure that IP forwarding is not enabled on Instances,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeIPForward.py
+CKV_GCP_33,GCP,Ensure oslogin is enabled for a Project,google_compute_project_metadata,GoogleComputeProjectOSLogin.py
+CKV_GCP_35,GCP,Ensure ,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeSerialPorts.py
+CKV_GCP_39,GCP,Ensure Compute instances are launched with Shielded VM enabled,"google_compute_instance, google_compute_instance_template, google_compute_instance_from_template",GoogleComputeShieldedVM.py
+CKV_GCP_4,GCP,Ensure no HTTPS or SSL proxy load balancers permit SSL policies with weak cipher suites,google_compute_ssl_policy,GoogleComputeSSLPolicy.py
+CKV_GCP_116,GCP,Ensure basic roles are not used at folder level.,,GoogleFolderBasicRole.py
+CKV_GCP_44,GCP,Ensure no roles that enable to impersonate and manage all service accounts are used at a folder level,,GoogleFolderImpersonationRole.py
+CKV_GCP_48,GCP,Ensure Default Service account is not used at a folder level,,GoogleFolderMemberDefaultServiceAccount.py
+CKV_GCP_118,GCP,Ensure IAM workload identity pool provider is restricted,google_iam_workload_identity_pool_provider,GoogleIAMWorkloadIdentityConditional.py
+CKV_GCP_112,GCP,Ensure KMS policy should not allow public access,,GoogleKMSKeyIsPublic.py
+CKV_GCP_82,GCP,Ensure KMS keys are protected from deletion,google_kms_crypto_key,GoogleKMSPreventDestroy.py
+CKV_GCP_43,GCP,Ensure KMS encryption keys are rotated within a period of 90 days,,GoogleKMSRotationPeriod.py
+CKV_GCP_115,GCP,Ensure basic roles are not used at organization level.,,GoogleOrgBasicRole.py
+CKV_GCP_45,GCP,Ensure no roles that enable to impersonate and manage all service accounts are used at an organization level,,GoogleOrgImpersonationRole.py
+CKV_GCP_47,GCP,Ensure default service account is not used at an organization level,,GoogleOrgMemberDefaultServiceAccount.py
+CKV_GCP_42,GCP,Ensure that Service Account has no Admin privileges,google_project_iam_member,GoogleProjectAdminServiceAccount.py
+CKV_GCP_117,GCP,Ensure basic roles are not used at project level.,,GoogleProjectBasicRole.py
+CKV_GCP_27,GCP,Ensure that the default network does not exist in a project,google_project,GoogleProjectDefaultNetwork.py
+CKV_GCP_49,GCP,Ensure roles do not impersonate or manage Service Accounts used at project level,,GoogleProjectImpersonationRole.py
+CKV_GCP_46,GCP,Ensure Default Service account is not used at a project level,,GoogleProjectMemberDefaultServiceAccount.py
+CKV_GCP_41,GCP,Ensure that IAM users are not assigned the Service Account User or Service Account Token Creator roles,"google_project_iam_binding, google_project_iam_member",GoogleRoleServiceAccountUser.py
+CKV_GCP_28,GCP,Ensure that Cloud Storage bucket is not anonymously or publicly accessible,"google_storage_bucket_iam_member, google_storage_bucket_iam_binding",GoogleStorageBucketNotPublic.py
+CKV_GCP_29,GCP,Ensure that Cloud Storage buckets have uniform bucket-level access enabled,google_storage_bucket,GoogleStorageBucketUniformAccess.py
+CKV_GCP_114,GCP,Ensure public access prevention is enforced on Cloud Storage bucket,google_storage_bucket,GoogleStoragePublicAccessPrevention.py
+CKV_GCP_76,GCP,Ensure that Private google access is enabled for IPV6,,GoogleSubnetworkIPV6PrivateGoogleEnabled.py
+CKV_GCP_26,GCP,Ensure that VPC Flow Logs is enabled for every subnet in a VPC Network,,GoogleSubnetworkLoggingEnabled.py
+CKV_GCP_74,GCP,Ensure that private_ip_google_access is enabled for Subnet,,GoogleSubnetworkPrivateGoogleEnabled.py
+CKV_GCP_126,GCP,Ensure Vertex AI Notebook instances are launched with Shielded VM enabled,google_notebooks_instance,GoogleVertexAINotebookShieldedVM.py
+CKV_GCP_95,GCP,Ensure Memorystore for Redis has AUTH enabled,,MemorystoreForRedisAuthEnabled.py
+CKV_GCP_97,GCP,Ensure Memorystore for Redis uses intransit encryption,google_redis_instance,MemorystoreForRedisInTransitEncryption.py
+CKV_GCP_99,GCP,Ensure that Pub/Sub Topics are not anonymously or publicly accessible,,PubSubPrivateTopic.py
+CKV_GCP_119,GCP,Ensure Spanner Database has deletion protection enabled,google_spanner_database,SpannerDatabaseDeletionProtection.py
+CKV_GCP_120,GCP,Ensure Spanner Database has drop protection enabled,google_spanner_database,SpannerDatabaseDropProtection.py
+CKV_GCP_93,GCP,Ensure Spanner Database is encrypted with Customer Supplied Encryption Keys (CSEK),google_spanner_database,SpannerDatabaseEncryptedWithCMK.py
+CKV_GCP_92,GCP,Ensure Vertex AI datasets uses a CMK (Customer Managed Key),google_vertex_ai_dataset,VertexAIDatasetEncryptedWithCMK.py
+CKV_GCP_96,GCP,Ensure Vertex AI Metadata Store uses a CMK (Customer Managed Key),google_vertex_ai_metadata_store,VertexAIMetadataStoreEncryptedWithCMK.py
+CKV_GCP_127,GCP,Ensure Integrity Monitoring for Shielded Vertex AI Notebook Instances is Enabled,google_notebooks_instance,VertexAINotebookEnsureIntegrityMonitoring.py
+CKV_GCP_89,GCP,Ensure Vertex AI instances are private,,VertexAIPrivateInstance.py
+CKV_GIT_6,GitHub,Ensure GitHub branch protection rules requires signed commits,"github_branch_protection_v3, github_branch_protection",BranchProtectionRequireSignedCommits.py
+CKV_GIT_5,GitHub,GitHub pull requests should require at least 2 approvals,,BranchProtectionReviewNumTwo.py
+CKV_GIT_1,GitHub,Ensure GitHub repository is Private,github_repository,PrivateRepo.py
+CKV_GIT_3,GitHub,Ensure GitHub repository has vulnerability alerts enabled,github_repository,RepositoryEnableVulnerabilityAlerts.py
+CKV_GIT_4,GitHub,Ensure GitHub Actions secrets are encrypted,,SecretsEncrypted.py
+CKV_GIT_2,GitHub,Ensure GitHub repository webhooks are using HTTPS,,WebhookInsecureSsl.py
+CKV_GLB_2,GitLab,Ensure GitLab branch protection rules does not allow force pushes,gitlab_branch_protection,ForcePushDisabled.py
+CKV_GLB_3,GitLab,Ensure GitLab prevent secrets is enabled,gitlab_project,PreventSecretsEnabled.py
+CKV_GLB_4,GitLab,Ensure GitLab commits are signed,gitlab_project,RejectUnsignedCommits.py
+CKV_GLB_1,GitLab,Ensure at least two approving reviews are required to merge a GitLab MR,gitlab_project,RequireTwoApprovalsToMerge.py
+CKV_K8S_25,Kubernetes,Minimize the admission of containers with added capability,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",AllowedCapabilities.py
+CKV_K8S_24,Kubernetes,Do not allow containers with added capability,kubernetes_pod_security_policy,AllowedCapabilitiesPSP.py
+CKV_K8S_39,Kubernetes,Do not use the CAP_SYS_ADMIN linux capability,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",AllowedCapabilitiesSysAdmin.py
+CKV_K8S_20,Kubernetes,Containers should not run with allowPrivilegeEscalation,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",AllowPrivilegeEscalation.py
+CKV_K8S_5,Kubernetes,Containers should not run with allowPrivilegeEscalation,,AllowPrivilegeEscalationPSP.py
+CKV_K8S_30,Kubernetes,Apply security context to your pods and containers,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ContainerSecurityContext.py
+CKV_K8S_11,Kubernetes,CPU Limits should be set,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",CPULimits.py
+CKV_K8S_10,Kubernetes,CPU requests should be set,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",CPURequests.py
+CKV_K8S_159,Kubernetes,Do not admit privileged containers,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",DangerousGitSync.py
+CKV_K8S_21,Kubernetes,The default namespace should not be used,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1, kubernetes_daemonset, kubernetes_daemon_set_v1, kubernetes_stateful_set, kubernetes_stateful_set_v1, kubernetes_replication_controller, kubernetes_replication_controller_v1, kubernetes_job, kubernetes_job_v1, kubernetes_cron_job, kubernetes_cron_job_v1, kubernetes_service, kubernetes_service_v1, kubernetes_secret, kubernetes_secret_v1, kubernetes_service_account, kubernetes_service_account_v1, kubernetes_role_binding, kubernetes_role_binding_v1, kubernetes_config_map, kubernetes_config_map_v1, kubernetes_ingress, kubernetes_ingress_v1",DefaultNamespace.py
+CKV_K8S_41,Kubernetes,Ensure that default service accounts are not actively used,"kubernetes_service_account, kubernetes_service_account_v1",DefaultServiceAccount.py
+CKV_K8S_42,Kubernetes,Ensure that default service accounts are not actively used,"kubernetes_role_binding, kubernetes_role_binding_v1, kubernetes_cluster_role_binding, kubernetes_cluster_role_binding_v1",DefaultServiceAccountBinding.py
+CKV_K8S_27,Kubernetes,Do not expose the docker daemon socket to containers,,DockerSocketVolume.py
+CKV_K8S_28,Kubernetes,Minimize the admission of containers with the NET_RAW capability,,DropCapabilities.py
+CKV_K8S_7,Kubernetes,Do not admit containers with the NET_RAW capability,kubernetes_pod_security_policy,DropCapabilitiesPSP.py
+CKV_K8S_26,Kubernetes,Do not specify hostPort unless absolutely necessary,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",HostPort.py
+CKV_K8S_43,Kubernetes,Image should use digest,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ImageDigest.py
+CKV_K8S_15,Kubernetes,Image Pull Policy should be Always,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ImagePullPolicyAlways.py
+CKV_K8S_14,Kubernetes,Image Tag should be fixed - not latest or blank,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ImageTagFixed.py
+CKV_K8S_8,Kubernetes,Liveness Probe Should be Configured,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",LivenessProbe.py
+CKV_K8S_12,Kubernetes,Memory Limits should be set,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",MemoryLimits.py
+CKV_K8S_13,Kubernetes,Memory requests should be set,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",MemoryRequests.py
+CKV_K8S_37,Kubernetes,Minimise the admission of containers with capabilities assigned,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",MinimiseCapabilities.py
+CKV_K8S_36,Kubernetes,Minimise the admission of containers with capabilities assigned,kubernetes_pod_security_policy,MinimiseCapabilitiesPSP.py
+CKV_K8S_29,Kubernetes,"Apply security context to your pods, deployments and daemon_sets",,PodSecurityContext.py
+CKV_K8S_16,Kubernetes,Do not admit privileged containers,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",PrivilegedContainer.py
+CKV_K8S_2,Kubernetes,Do not admit privileged containers,,PrivilegedContainerPSP.py
+CKV_K8S_9,Kubernetes,Readiness Probe Should be Configured,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ReadinessProbe.py
+CKV_K8S_22,Kubernetes,Use read-only filesystem for containers where possible,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ReadonlyRootFilesystem.py
+CKV_K8S_6,Kubernetes,Do not admit root containers,kubernetes_pod_security_policy,RootContainerPSP.py
+CKV_K8S_32,Kubernetes,Ensure default seccomp profile set to docker/default or runtime/default,kubernetes_pod_security_policy,SeccompPSP.py
+CKV_K8S_35,Kubernetes,Prefer using secrets as files over secrets as environment variables,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",Secrets.py
+CKV_K8S_19,Kubernetes,Do not admit containers wishing to share the host network namespace,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",SharedHostNetworkNamespace.py
+CKV_K8S_4,Kubernetes,Do not admit containers wishing to share the host network namespace,kubernetes_pod_security_policy,SharedHostNetworkNamespacePSP.py
+CKV_K8S_18,Kubernetes,Do not admit containers wishing to share the host IPC namespace,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ShareHostIPC.py
+CKV_K8S_3,Kubernetes,Do not admit containers wishing to share the host IPC namespace,kubernetes_pod_security_policy,ShareHostIPCPSP.py
+CKV_K8S_17,Kubernetes,Do not admit containers wishing to share the host process ID namespace,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",ShareHostPID.py
+CKV_K8S_1,Kubernetes,Do not admit containers wishing to share the host process ID namespace,kubernetes_pod_security_policy,ShareHostPIDPSP.py
+CKV_K8S_34,Kubernetes,Ensure that Tiller (Helm v2) is not deployed,"kubernetes_pod, kubernetes_pod_v1, kubernetes_deployment, kubernetes_deployment_v1",Tiller.py
+CKV_K8S_44,Kubernetes,Ensure that the Tiller Service (Helm v2) is deleted,"kubernetes_service, kubernetes_service_v1",TillerService.py
+CKV_K8S_49,Kubernetes,Minimize wildcard use in Roles and ClusterRoles,"kubernetes_role, kubernetes_role_v1, kubernetes_cluster_role, kubernetes_cluster_role_v1",WildcardRoles.py
+CKV_LIN_2,Linode,Ensure SSH key set in authorized_keys,linode_instance,authorized_keys.py
+CKV_LIN_5,Linode,Ensure Inbound Firewall Policy is not set to ACCEPT,linode_firewall,firewall_inbound_policy.py
+CKV_LIN_6,Linode,Ensure Outbound Firewall Policy is not set to ACCEPT,linode_firewall,firewall_outbound_policy.py
+CKV_LIN_3,Linode,Ensure email is set,linode_user,user_email_set.py
+CKV_LIN_4,Linode,Ensure username is set,linode_user,user_username_set.py
+CKV_NCP_3,NCP,Ensure no security group rules allow outbound traffic to 0.0.0.0/0,,AccessControlGroupOutboundRule.py
+CKV_NCP_2,NCP,Ensure every access control groups rule has a description,,AccessControlGroupRuleDescription.py
+CKV_NCP_7,NCP,Ensure Basic Block storage is encrypted.,,LaunchConfigurationEncryptionVPC.py
+CKV_NCP_13,NCP,Ensure LB Listener uses only secure protocols,,LBListenerUsesSecureProtocols.py
+CKV_NCP_24,NCP,Ensure Load Balancer Listener Using HTTPS,,LBListenerUsingHTTPS.py
+CKV_NCP_16,NCP,Ensure Load Balancer isn,,LBNetworkPrivate.py
+CKV_NCP_1,NCP,Ensure HTTP HTTPS Target group defines Healthcheck,,LBTargetGroupDefinesHealthCheck.py
+CKV_NCP_15,NCP,Ensure Load Balancer Target Group is not using HTTP,,LBTargetGroupUsingHTTPS.py
+CKV_NCP_12,NCP,An inbound Network ACL rule should not allow ALL ports.,,NACLPortCheck.py
+CKV_NCP_14,NCP,Ensure NAS is securely encrypted,,NASEncryptionEnabled.py
+CKV_NCP_22,NCP,Ensure NKS control plane logging enabled for all log types,,NKSControlPlaneLogging.py
+CKV_NCP_19,NCP,Ensure Naver Kubernetes Service public endpoint disabled,,NKSPublicAccess.py
+CKV_NCP_20,NCP,Ensure Routing Table associated with Web tier subnet have the default route (0.0.0.0/0) defined to ,,RouteTableNATGatewayDefault.py
+CKV_NCP_6,NCP,Ensure Server instance is encrypted.,,ServerEncryptionVPC.py
+CKV_NCP_23,NCP,Ensure Server instance should not have public IP.,,ServerPublicIP.py
+CKV_OCI_23,Oracle Cloud,Ensure OCI Data Catalog is configured without overly permissive network access,oci_datacatalog_catalog,DataCatalogWithPublicAccess.py
+CKV_OCI_15,Oracle Cloud,Ensure OCI File System is Encrypted with a customer Managed Key,oci_file_storage_file_system,FileSystemEncryption.py
+CKV_OCI_18,Oracle Cloud,OCI IAM password policy for local (non-federated) users has a minimum length of 14 characters,,IAMPasswordLength.py
+CKV_OCI_11,Oracle Cloud,OCI IAM password policy - must contain lower case,oci_identity_authentication_policy,IAMPasswordPolicyLowerCase.py
+CKV_OCI_12,Oracle Cloud,OCI IAM password policy - must contain Numeric characters,oci_identity_authentication_policy,IAMPasswordPolicyNumeric.py
+CKV_OCI_13,Oracle Cloud,OCI IAM password policy - must contain Special characters,oci_identity_authentication_policy,IAMPasswordPolicySpecialCharacters.py
+CKV_OCI_14,Oracle Cloud,OCI IAM password policy - must contain Uppercase characters,oci_identity_authentication_policy,IAMPasswordPolicyUpperCase.py
+CKV_OCI_4,Oracle Cloud,Ensure OCI Compute Instance boot volume has in-transit data encryption enabled,oci_core_instance,InstanceBootVolumeIntransitEncryption.py
+CKV_OCI_5,Oracle Cloud,Ensure OCI Compute Instance has Legacy MetaData service endpoint disabled,,InstanceMetadataServiceEnabled.py
+CKV_OCI_6,Oracle Cloud,Ensure OCI Compute Instance has monitoring enabled,,InstanceMonitoringEnabled.py
+CKV_OCI_7,Oracle Cloud,Ensure OCI Object Storage bucket can emit object events,oci_objectstorage_bucket,ObjectStorageEmitEvents.py
+CKV_OCI_9,Oracle Cloud,Ensure OCI Object Storage is encrypted with Customer Managed Key,oci_objectstorage_bucket,ObjectStorageEncryption.py
+CKV_OCI_10,Oracle Cloud,Ensure OCI Object Storage is not Public,oci_objectstorage_bucket,ObjectStoragePublic.py
+CKV_OCI_8,Oracle Cloud,Ensure OCI Object Storage has versioning enabled,oci_objectstorage_bucket,ObjectStorageVersioning.py
+CKV_OCI_21,Oracle Cloud,Ensure security group has stateless ingress security rules,,SecurityGroupsIngressStatelessSecurityRules.py
+CKV_OCI_16,Oracle Cloud,Ensure VCN has an inbound security list,oci_core_security_list,SecurityListIngress.py
+CKV_OCI_17,Oracle Cloud,Ensure VCN inbound security lists are stateless,oci_core_security_list,SecurityListIngressStateless.py
+CKV_OCI_2,Oracle Cloud,Ensure OCI Block Storage Block Volume has backup enabled,oci_core_volume,StorageBlockBackupEnabled.py
+CKV_OCI_3,Oracle Cloud,OCI Block Storage Block Volumes are not encrypted with a Customer Managed Key (CMK),,StorageBlockEncryption.py
+CKV_OKTA_1,Okta,Ensure 2FA is enabled for an Okta application signon policy rule,okta_app_signon_policy_rule,TwoFASignOnPolicyRule.py
+CKV_OPENSTACK_4,OpenStack,Ensure that instance does not use basic credentials,openstack_compute_instance_v2,ComputeInstanceAdminPassword.py
+CKV_OPENSTACK_5,OpenStack,Ensure firewall rule set a destination IP,,FirewallRuleSetDestinationIP.py
+CKV_PAN_2,Palo Alto,Ensure plain-text management HTTP is not enabled for an Interface Management Profile,panos_management_profile,InterfaceMgmtProfileNoHTTP.py
+CKV_PAN_3,Palo Alto,Ensure plain-text management Telnet is not enabled for an Interface Management Profile,panos_management_profile,InterfaceMgmtProfileNoTelnet.py
+CKV_PAN_11,Palo Alto,Ensure IPsec profiles do not specify use of insecure encryption algorithms,,NetworkIPsecAlgorithms.py
+CKV_PAN_12,Palo Alto,Ensure IPsec profiles do not specify use of insecure authentication algorithms,,NetworkIPsecAuthAlgorithms.py
+CKV_PAN_13,Palo Alto,Ensure IPsec profiles do not specify use of insecure protocols,"panos_ipsec_crypto_profile, panos_panorama_ipsec_crypto_profile",NetworkIPsecProtocols.py
+CKV_PAN_8,Palo Alto,Ensure description is populated within security policies,,PolicyDescription.py
+CKV_PAN_9,Palo Alto,Ensure a Log Forwarding Profile is selected for each security policy rule,,PolicyLogForwarding.py
+CKV_PAN_10,Palo Alto,Ensure logging at session end is enabled within security policies,,PolicyLoggingEnabled.py
+CKV_PAN_5,Palo Alto,Ensure security rules do not have ,,PolicyNoApplicationAny.py
+CKV_PAN_4,Palo Alto,Ensure DSRI is not enabled within security policies,,PolicyNoDSRI.py
+CKV_PAN_6,Palo Alto,Ensure security rules do not have ,,PolicyNoServiceAny.py
+CKV_PAN_7,Palo Alto,Ensure security rules do not have ,,PolicyNoSrcAnyDstAny.py
+CKV_PAN_14,Palo Alto,Ensure a Zone Protection Profile is defined within Security Zones,,ZoneProtectionProfile.py
+CKV_PAN_15,Palo Alto,Ensure an Include ACL is defined for a Zone when User-ID is enabled,,ZoneUserIDIncludeACL.py
+CKV_TC_1,Tencent Cloud,Ensure Tencent Cloud CBS is encrypted,tencentcloud_cbs_storage,CBSEncryption.py
+CKV_TC_9,Tencent Cloud,Ensure Tencent Cloud mysql instances do not enable access from public networks,tencentcloud_mysql_instance,CDBInternetService.py
+CKV_TC_10,Tencent Cloud,Ensure Tencent Cloud MySQL instances intranet ports are not set to the default 3306,tencentcloud_mysql_instance,CDBIntranetPort.py
+CKV_TC_11,Tencent Cloud,Ensure Tencent Cloud CLB has a logging ID and topic,tencentcloud_clb_instance,CLBInstanceLog.py
+CKV_TC_12,Tencent Cloud,"Ensure Tencent Cloud CLBs use modern, encrypted protocols",tencentcloud_clb_listener,CLBListenerProtocol.py
+CKV_TC_2,Tencent Cloud,Ensure Tencent Cloud CVM instance does not allocate a public IP,tencentcloud_instance,CVMAllocatePublicIp.py
+CKV_TC_3,Tencent Cloud,Ensure Tencent Cloud CVM monitor service is enabled,tencentcloud_instance,CVMDisableMonitorService.py
+CKV_TC_4,Tencent Cloud,Ensure Tencent Cloud CVM instances do not use the default security group ,tencentcloud_instance,CVMUseDefaultSecurityGroup.py
+CKV_TC_5,Tencent Cloud,Ensure Tencent Cloud CVM instances do not use the default VPC,tencentcloud_instance,CVMUseDefaultVPC.py
+CKV_TC_13,Tencent Cloud,Ensure Tencent Cloud CVM user data does not contain sensitive information,tencentcloud_instance,CVMUserData.py
+CKV_TC_6,Tencent Cloud,Ensure Tencent Cloud TKE clusters enable log agent,tencentcloud_kubernetes_cluster,TKELogAgentEnabled.py
+CKV_TC_7,Tencent Cloud,Ensure Tencent Cloud TKE cluster is not assigned a public IP address,tencentcloud_kubernetes_cluster,TKEPublicIpAssigned.py
+CKV_TC_14,Tencent Cloud,Ensure Tencent Cloud VPC flow logs are enabled,tencentcloud_vpc_flow_log_config,VPCFlowLogConfigEnable.py
+CKV_TC_8,Tencent Cloud,Ensure Tencent Cloud VPC security group rules do not accept all traffic,tencentcloud_security_group_rule_set,VPCSecurityGroupRuleSet.py
+CKV_YC_18,Yandex Cloud,Ensure compute instance group does not have public IP.,,ComputeInstanceGroupPublicIP.py
+CKV_YC_22,Yandex Cloud,Ensure compute instance group has security group assigned.,,ComputeInstanceGroupSecurityGroup.py
+CKV_YC_2,Yandex Cloud,Ensure compute instance does not have public IP.,,ComputeVMPublicIP.py
+CKV_YC_11,Yandex Cloud,Ensure security group is assigned to network interface.,,ComputeVMSecurityGroup.py
+CKV_YC_4,Yandex Cloud,Ensure compute instance does not have serial console enabled.,,ComputeVMSerialConsole.py
+CKV_YC_13,Yandex Cloud,Ensure cloud member does not have elevated access.,,IAMCloudElevatedMembers.py
+CKV_YC_23,Yandex Cloud,Ensure folder member does not have elevated access.,,IAMFolderElevatedMembers.py
+CKV_YC_21,Yandex Cloud,Ensure organization member does not have elevated access.,,IAMOrganizationElevatedMembers.py
+CKV_YC_24,Yandex Cloud,Ensure passport account is not used for assignment. Use service accounts and federated accounts where possible.,,IAMPassportAccountUsage.py
+CKV_YC_7,Yandex Cloud,Ensure Kubernetes cluster auto-upgrade is enabled.,,K8SAutoUpgrade.py
+CKV_YC_10,Yandex Cloud,Ensure etcd database is encrypted with KMS key.,,K8SEtcdKMSEncryption.py
+CKV_YC_16,Yandex Cloud,Ensure network policy is assigned to Kubernetes cluster.,,K8SNetworkPolicy.py
+CKV_YC_8,Yandex Cloud,Ensure Kubernetes node group auto-upgrade is enabled.,,K8SNodeGroupAutoUpgrade.py
+CKV_YC_6,Yandex Cloud,Ensure Kubernetes cluster node group does not have public IP addresses.,,K8SNodeGroupPublicIP.py
+CKV_YC_15,Yandex Cloud,Ensure security group is assigned to Kubernetes node group.,,K8SNodeGroupSecurityGroup.py
+CKV_YC_5,Yandex Cloud,Ensure Kubernetes cluster does not have public IP address.,,K8SPublicIP.py
+CKV_YC_14,Yandex Cloud,Ensure security group is assigned to Kubernetes cluster.,,K8SSecurityGroup.py
+CKV_YC_9,Yandex Cloud,Ensure KMS symmetric key is rotated.,,KMSSymmetricKeyRotation.py
+CKV_YC_12,Yandex Cloud,Ensure public IP is not assigned to database cluster.,,MDBPublicIP.py
+CKV_YC_1,Yandex Cloud,Ensure security group is assigned to database cluster.,,MDBSecurityGroup.py
+CKV_YC_3,Yandex Cloud,Ensure storage bucket is encrypted.,,ObjectStorageBucketEncryption.py
+CKV_YC_17,Yandex Cloud,Ensure storage bucket does not have public access permissions.,,ObjectStorageBucketPublicAccess.py
+CKV_YC_19,Yandex Cloud,Ensure security group does not contain allow-all rules.,,VPCSecurityGroupAllowAll.py
+CKV_YC_20,Yandex Cloud,Ensure security group rule is not allow-all.,,VPCSecurityGroupRuleAllowAll.py
